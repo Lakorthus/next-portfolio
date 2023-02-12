@@ -7,7 +7,7 @@ const Header: React.FC<IHeader> = ({ className, ...headerProps }) => {
   return (
     <header
       {...headerProps}
-      className={`w-full flex flex-row justify-between ${className}`}
+      className={`w-full flex flex-row justify-between sticky z-10 top-0 overflow-hidden bg-white ${className}`}
     >
       <div className="space-x-5 m-5">
         <Link className="hover:underline" href="/">

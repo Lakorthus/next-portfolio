@@ -1,17 +1,32 @@
+import type { SanityDocument } from '@sanity/client';
+import { groq } from 'next-sanity';
 import PrimaryLayout from '../components/layouts/primary/PrimaryLayout';
+import Movies from '../components/movies/Movies';
+import { client } from '../lib/sanity.client';
 
-import { NextPageWithLayout } from './page';
+const query = groq`*[_type == "movie" && defined(slug.current)]{
+  _id,
+  title, 
+  slug,
+  poster,
+  releaseDate
+}`;
+export const getStaticProps = async () => {
+  const data = await client.fetch(query);
 
-const Home: NextPageWithLayout = () => {
+  return { props: { data } };
+};
+
+const Home = ({ data }: { data: SanityDocument[] }) => {
   return (
-    <section className="flex items-center justify-center min-h-screen">
-      Populate me with Sanity Content
+    <section className="flex justify-center w-full">
+      <Movies movies={data} />
     </section>
   );
 };
 
 export default Home;
 
-Home.getLayout = (page) => {
+Home.getLayout = (page: any) => {
   return <PrimaryLayout justify="items-center">{page}</PrimaryLayout>;
 };
