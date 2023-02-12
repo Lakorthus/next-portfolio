@@ -1,17 +1,22 @@
 import { SanityDocument } from '@sanity/client';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { groq } from 'next-sanity';
+import { PreviewSuspense } from 'next-sanity/preview';
+import { lazy } from 'react';
 import PrimaryLayout from '../components/layouts/primary/PrimaryLayout';
+
 import Movie from '../components/movie/Movie';
 import { client } from '../lib/sanity.client';
 
+const PreviewMovie = lazy(
+  () => import('../components/movie-preview/MoviePreview')
+);
 const query = groq`*[_type == "movie" && slug.current == $slug][0]{
   title,
   poster,
   overview
 }`;
 
-// Prepare Next.js to know which routes already exist
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = await client.fetch(
     groq`*[_type == "movie" && defined(slug.current)][]{
@@ -22,19 +27,46 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return { paths, fallback: true };
 };
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getStaticProps: GetStaticProps = async ({
+  params,
+  preview = false,
+}) => {
   const queryParams = { slug: params?.slug ?? `` };
+
+  if (preview) {
+    return { props: { preview, data: { queryParams } } };
+  }
 
   const movie = await client.fetch(query, queryParams);
 
   return {
     props: {
-      data: { movie },
+      preview,
+      data: {
+        movie,
+        queryParams: {},
+      },
     },
   };
 };
-function Page({ data }: { data: { movie: SanityDocument } }) {
-  return <Movie movie={data.movie} />;
+
+function Page({
+  preview,
+  data,
+}: {
+  preview: Boolean;
+  data: {
+    movie: SanityDocument;
+    queryParams: {};
+  };
+}) {
+  return preview ? (
+    <PreviewSuspense fallback="Loading...">
+      <PreviewMovie query={query} queryParams={data.queryParams} />
+    </PreviewSuspense>
+  ) : (
+    <Movie movie={data.movie} />
+  );
 }
 
 Page.getLayout = (page: any) => {
