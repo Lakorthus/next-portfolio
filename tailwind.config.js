@@ -6,6 +6,9 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx}',
     './stories/**/*.{ts,tsx}',
   ],
+  daisyui: {
+    themes: ['dracula'],
+  },
   theme: {
     // Ensure these match with .storybook/preview.js
     screens: {
@@ -43,5 +46,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('daisyui')],
 };

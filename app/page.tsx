@@ -1,8 +1,5 @@
-'use client';
-
 import Image from 'next/image';
 import Link from 'next/link';
-import Search from '../components/utility/search/Search';
 import GoogleImage from '../public/Google.png';
 
 const Home = () => {
@@ -15,7 +12,7 @@ const Home = () => {
         height={92}
         priority
       />
-      <Search />
+
       <p>
         Google offered in:{' '}
         <Link className="underline text-blue-600" href="/">

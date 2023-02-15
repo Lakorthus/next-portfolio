@@ -1,5 +1,3 @@
-import Head from 'next/head';
-import Footer from '../../navigation/footer/Footer';
 import Header from '../../navigation/header/Header';
 
 export interface IPrimaryLayout extends React.ComponentPropsWithoutRef<'div'> {
@@ -14,16 +12,11 @@ const PrimaryLayout: React.FC<IPrimaryLayout> = ({
 }) => {
   return (
     <>
-      <Head>
-        <title>NextJs Fullstack App Template</title>
-      </Head>
       <div {...divProps} className={`min-h-screen flex flex-col ${justify}`}>
         <Header />
         <main className="relative w-full flex-1 flex justify-center items-center">
           {children}
         </main>
-
-        <Footer />
       </div>
     </>
   );

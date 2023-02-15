@@ -1,4 +1,3 @@
-'use client';
 import PrimaryLayout from '../components/layouts/primary/PrimaryLayout';
 import { AuthProvider } from '../context/auth/AuthContext';
 import '../styles/globals.css';
@@ -14,7 +13,11 @@ function RootLayout({
     <html lang="en">
       <body>
         <AuthProvider>
-          <PrimaryLayout justify="items-center">{children}</PrimaryLayout>
+          <PrimaryLayout justify="items-center">
+            {/* <Error /> */}
+
+            {children}
+          </PrimaryLayout>
         </AuthProvider>
       </body>
     </html>
