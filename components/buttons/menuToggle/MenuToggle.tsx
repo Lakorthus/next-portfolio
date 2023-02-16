@@ -9,7 +9,7 @@ const Path = (props: any) => (
   <motion.path
     fill="transparent"
     strokeWidth="3"
-    stroke={'#fefefe'}
+    stroke={'#000'}
     strokeLinecap="round"
     {...props}
   />

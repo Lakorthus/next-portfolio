@@ -1,6 +1,7 @@
 'use client';
 
 import { motion, useCycle } from 'framer-motion';
+import { useEffect, useState } from 'react';
 import MenuToggle from '../../buttons/menuToggle/MenuToggle';
 import { sidebarVariant } from '../../utils/motion';
 import Navigation from '../navigationList/Navigation';
@@ -9,16 +10,27 @@ export interface IHeader extends React.ComponentPropsWithoutRef<'header'> {}
 
 const Header: React.FC<IHeader> = ({ className, ...headerProps }) => {
   const [isOpen, toggleOpen] = useCycle(false, true);
+
+  //loader
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+  }, []);
+
   return (
     <header {...headerProps} className={`${className}`}>
       <motion.nav
-        className={`h-screen w-[8rem] p-5 ${className} ${
-          isOpen ? 'glass' : ''
-        }`}
-        initial={false}
-        animate={isOpen ? 'open' : 'closed'}
+        className={` ${className}`}
+        initial={isLoading ? false : 'open'}
+        animate={isOpen || !isLoading ? 'open' : 'closed'}
       >
-        <motion.div variants={sidebarVariant} />
+        <motion.div
+          className={`h-screen md:bg-red-300`}
+          variants={sidebarVariant}
+        />
+
         <MenuToggle toggle={() => toggleOpen()} />
         <Navigation />
       </motion.nav>

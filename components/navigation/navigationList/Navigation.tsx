@@ -13,14 +13,14 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
 import NavButton from '../../buttons/menuItem/NavButton';
-import { navegatioVariants } from '../../utils/motion';
+import { navigationVariants } from '../../utils/motion';
 
 export interface INavigation {}
 
 const Navigation: React.FC<INavigation> = () => {
   return (
     <>
-      <motion.ul variants={navegatioVariants}>
+      <motion.ul variants={navigationVariants}>
         <NavButton faIcon={faEnvelope} path={'/'} colorIndex={1} />
         <NavButton faIcon={faHome} path={'/'} colorIndex={2} />
         <NavButton faIcon={faSuitcase} path={'/'} colorIndex={3} />
