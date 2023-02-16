@@ -23,11 +23,13 @@ const Header: React.FC<IHeader> = ({ className, ...headerProps }) => {
     <header {...headerProps} className={`${className}`}>
       <motion.nav
         className={` ${className}`}
-        initial={isLoading ? false : 'open'}
-        animate={isOpen || !isLoading ? 'open' : 'closed'}
+        initial={isLoading ? false : true}
+        animate={isOpen || isLoading ? 'closed' : 'open'}
+        // initial={false}
+        // animate={isOpen ? 'open' : 'closed'}
       >
         <motion.div
-          className={`h-screen md:bg-red-300`}
+          className={`h-screen bg-red-300`}
           variants={sidebarVariant}
         />
 
