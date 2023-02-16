@@ -1,22 +1,22 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import Navegation, { INavegation } from './Navegation';
-import { mockNavegationProps } from './Navegation.mocks';
+import Navigation, { INavigation } from './Navigation';
+import { mockNavigationProps } from './Navigation.mocks';
 
 export default {
-  title: 'navegationList/Navegation',
-  component: Navegation,
+  title: 'navigationList/Navigation',
+  component: Navigation,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},
-} as ComponentMeta<typeof Navegation>;
+} as ComponentMeta<typeof Navigation>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Navegation> = (args) => (
-  <Navegation {...args} />
+const Template: ComponentStory<typeof Navigation> = (args) => (
+  <Navigation {...args} />
 );
 
 export const Base = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 
 Base.args = {
-  ...mockNavegationProps.base,
-} as INavegation;
+  ...mockNavigationProps.base,
+} as INavigation;

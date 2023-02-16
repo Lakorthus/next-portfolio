@@ -1,34 +1,26 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { useState } from 'react';
-
-import { faBars } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Navegation from '../navegationList/Navegation';
+import { motion, useCycle } from 'framer-motion';
+import MenuToggle from '../../buttons/menuToggle/MenuToggle';
+import { sidebarVariant } from '../../utils/motion';
+import Navigation from '../navigationList/Navigation';
 
 export interface IHeader extends React.ComponentPropsWithoutRef<'header'> {}
 
-const variants = {
-  open: { opacity: 1, x: 0 },
-  closed: { opacity: 0, x: '-100%' },
-};
-
 const Header: React.FC<IHeader> = ({ className, ...headerProps }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, toggleOpen] = useCycle(false, true);
   return (
-    <header {...headerProps} className={`bg-primary ${className}`}>
-      <FontAwesomeIcon
-        icon={faBars}
-        color="#ffd700"
-        size="3x"
-        className="hamburger-icon"
-        onClick={() => setIsOpen((isOpen) => !isOpen)}
-      />
-      <motion.nav animate={isOpen ? 'open' : 'closed'} variants={variants}>
-        <ul>
-          <Navegation />
-        </ul>
+    <header {...headerProps} className={`${className}`}>
+      <motion.nav
+        className={`h-screen w-[8rem] p-5 ${className} ${
+          isOpen ? 'glass' : ''
+        }`}
+        initial={false}
+        animate={isOpen ? 'open' : 'closed'}
+      >
+        <motion.div variants={sidebarVariant} />
+        <MenuToggle toggle={() => toggleOpen()} />
+        <Navigation />
       </motion.nav>
     </header>
   );

@@ -1,9 +1,9 @@
 'use client';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Link from 'next/link';
-
 import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { navButtonVariants } from '../../utils/motion';
 
 export interface INavButton {
   faIcon: IconProp;
@@ -12,22 +12,6 @@ export interface INavButton {
   target?: boolean;
   colorIndex: number;
 }
-const variants = {
-  open: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      y: { stiffness: 1000, velocity: -100 },
-    },
-  },
-  closed: {
-    y: 50,
-    opacity: 0,
-    transition: {
-      y: { stiffness: 1000 },
-    },
-  },
-};
 
 const colors = [
   '#FF008C',
@@ -38,6 +22,7 @@ const colors = [
   '#FF008C',
   '#D309E1',
   '#9C1AFF',
+  '#4400FF',
 ];
 
 const NavButton: React.FC<INavButton> = ({
@@ -51,9 +36,10 @@ const NavButton: React.FC<INavButton> = ({
 
   return (
     <motion.li
-      variants={variants}
+      variants={navButtonVariants}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
+      className="bg-slate-100"
     >
       <div className="icon-placeholder" style={style}>
         <Link
