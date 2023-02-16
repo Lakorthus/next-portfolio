@@ -1,5 +1,5 @@
 export const sidebarVariant = {
-  open: (height = 1000) => ({
+  open: (height = 200) => ({
     clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
     transition: {
       type: 'spring',
@@ -18,7 +18,7 @@ export const sidebarVariant = {
   },
 };
 
-export const navegatioVariants = {
+export const navigationVariants = {
   open: {
     transition: { staggerChildren: 0.07, delayChildren: 0.2 },
   },
