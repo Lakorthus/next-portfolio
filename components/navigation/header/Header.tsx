@@ -1,31 +1,35 @@
-import Link from 'next/link';
-import AuthButton from '../../buttons/auth/AuthButton';
+'use client';
+
+import { motion } from 'framer-motion';
+import { useState } from 'react';
+
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Navegation from '../navegationList/Navegation';
 
 export interface IHeader extends React.ComponentPropsWithoutRef<'header'> {}
 
+const variants = {
+  open: { opacity: 1, x: 0 },
+  closed: { opacity: 0, x: '-100%' },
+};
+
 const Header: React.FC<IHeader> = ({ className, ...headerProps }) => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <header
-      {...headerProps}
-      className={`w-full flex flex-row justify-between ${className}`}
-    >
-      <div className="space-x-5 m-5">
-        <Link className="hover:underline" href="/">
-          Home
-        </Link>
-        <Link className="hover:underline" href="/">
-          Store
-        </Link>
-      </div>
-      <div className="space-x-5 m-5">
-        <Link className="hover:underline hidden sm:inline" href="/">
-          Gmail
-        </Link>
-        <Link className="hover:underline hidden sm:inline" href="/">
-          Images
-        </Link>
-        <AuthButton />
-      </div>
+    <header {...headerProps} className={`bg-primary ${className}`}>
+      <FontAwesomeIcon
+        icon={faBars}
+        color="#ffd700"
+        size="3x"
+        className="hamburger-icon"
+        onClick={() => setIsOpen((isOpen) => !isOpen)}
+      />
+      <motion.nav animate={isOpen ? 'open' : 'closed'} variants={variants}>
+        <ul>
+          <Navegation />
+        </ul>
+      </motion.nav>
     </header>
   );
 };

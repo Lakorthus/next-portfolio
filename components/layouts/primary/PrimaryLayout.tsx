@@ -12,7 +12,10 @@ const PrimaryLayout: React.FC<IPrimaryLayout> = ({
 }) => {
   return (
     <>
-      <div {...divProps} className={`min-h-screen flex flex-col ${justify}`}>
+      <div
+        {...divProps}
+        className={`min-h-screen flex flex-col lg:flex-row ${justify}`}
+      >
         <Header />
         <main className="relative w-full flex-1 flex justify-center items-center">
           {children}
