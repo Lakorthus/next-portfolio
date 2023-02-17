@@ -3,7 +3,7 @@ import NavButton, { INavButton } from './NavButton';
 import { mockNavButtonProps } from './NavButton.mocks';
 
 export default {
-  title: 'navigation/NavButton',
+  title: 'buttons/NavButton',
   component: NavButton,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},

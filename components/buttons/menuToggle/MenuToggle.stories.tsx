@@ -3,7 +3,7 @@ import MenuToggle, { IMenuToggle } from './MenuToggle';
 import { mockMenuToggleProps } from './MenuToggle.mocks';
 
 export default {
-  title: 'menu/MenuToggle',
+  title: 'buttons/MenuToggle',
   component: MenuToggle,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},

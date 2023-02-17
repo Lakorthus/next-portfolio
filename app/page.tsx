@@ -1,28 +1,25 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import GoogleImage from '../public/Google.png';
-
+import { About, Hero } from '../sections/';
 const Home = () => {
   return (
     <>
-      <section className="relative">
+      <Hero sampleTextProp="Hello from Hero" />
+      <div className="relative">
+        <About sampleTextProp="Hello from About" />
         <div className="gradient-03 z-0" />
-
-        <Image
-          src={GoogleImage}
-          alt="Google Logo"
-          width={272}
-          height={92}
-          priority
-        />
-
-        <p>
-          Google offered in:{' '}
-          <Link className="underline text-blue-600" href="/">
-            Spanish
-          </Link>
-        </p>
-      </section>
+        {/* <Explore /> */}
+      </div>
+      <div className="relative">
+        {/* <GetStarted /> */}
+        <div className="gradient-04 z-0" />
+        {/* <WhatsNew /> */}
+      </div>
+      {/* <World /> */}
+      <div className="relative">
+        {/* <Insights /> */}
+        <div className="h-screen bg-red-300 z-0" />
+        {/* <Feedback /> */}
+      </div>
+      {/* <Footer /> */}
     </>
   );
 };
