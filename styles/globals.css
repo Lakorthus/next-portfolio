@@ -4,7 +4,7 @@
 
 @layer components {
   .btn-primary {
-    @apply border-0 p-2 px-6 bg-slate-100 rounded-md;
+    @apply border-0 p-2 px-6 rounded-md;
   }
   .sidebar {
     @apply absolute inset-0 z-10;
@@ -13,7 +13,7 @@
     @apply border-none cursor-pointer fixed top-4 left-4 w-[50px] h-[50px] rounded-full bg-transparent flex justify-center items-center;
   }
   .menu {
-    @apply absolute top-24  p-6 gap-y-2;
+    @apply absolute top-20 left-0 p-6 gap-y-2;
   }
   .menuItem {
     @apply list-none flex flex-row items-center cursor-pointer;
@@ -28,7 +28,7 @@
     @apply w-10 h-10 rounded-full flex items-center mr-5;
   }
   .primaryLayout {
-    @apply relative w-screen h-screen p-0 m-0 flex justify-center items-center;
+    @apply relative w-screen h-screen p-0 m-0 flex justify-center items-center overflow-hidden;
   }
 }
 * {
