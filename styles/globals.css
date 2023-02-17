@@ -6,78 +6,128 @@
   .btn-primary {
     @apply border-0 p-2 px-6 bg-slate-100 rounded-md;
   }
+  .sidebar {
+    @apply absolute top-0 left-0 bottom-0 z-10;
+  }
+  .sidebarBg {
+    @apply h-full absolute top-0 left-0 w-[15rem];
+  }
+  .menuToggle {
+    @apply border-none cursor-pointer fixed top-4 left-4 w-[50px] h-[50px] rounded-full bg-transparent flex justify-center items-center;
+  }
+  .menu {
+    @apply absolute top-24 w-60 p-6 gap-y-2;
+  }
+  .menuItem {
+    @apply list-none flex flex-row items-center cursor-pointer;
+  }
+  .menuMenuItem {
+    @apply m-0 p-2;
+  }
+  .placeholder {
+    @apply rounded-md h-5 flex-1 mr-2 py-4;
+  }
+  .menuIcon {
+    @apply w-10 h-10 rounded-full flex items-center mr-5;
+  }
+  .primaryLayout {
+    @apply relative w-screen h-screen overflow-hidden p-0 m-0 flex justify-center items-center;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Eudoxus Sans', sans-serif;
+  scroll-behavior: smooth;
 }
 
-body {
-  width: 100vw;
+.gradient-01 {
+  background-image: linear-gradient(
+    270deg,
+    hsl(295deg 76% 51%) 0%,
+    hsl(284deg 70% 73%) 26%,
+    hsl(257deg 70% 86%) 39%,
+    hsl(202deg 92% 90%) 50%,
+    hsl(215deg 77% 81%) 61%,
+    hsl(221deg 73% 70%) 74%,
+    hsl(220deg 76% 51%) 100%
+  );
+  filter: blur(125px);
+}
+
+.hero-gradient {
+  background: linear-gradient(
+    97.86deg,
+    #a509ff 0%,
+    #34acc7 53.65%,
+    #a134c7 100%
+  );
+}
+
+.gradient-02 {
+  position: absolute;
+  width: 200px;
+  height: 438px;
+  top: 0px;
+  right: 0px;
+  background: #7aebfb;
+  filter: blur(190px);
+}
+.gradient-03 {
+  position: absolute;
+  width: 404px;
+  height: 800px;
+  left: 20%;
+  top: 5%;
+  background: rgba(149, 66, 232, 0.35);
+  filter: blur(175px);
+  transform: rotate(-114.2deg);
+}
+
+.gradient-04 {
+  position: absolute;
+  width: 304px;
   height: 100vh;
-  background: linear-gradient(180deg, #0055ff 0%, rgb(0, 153, 255) 100%);
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  left: 30%;
+  top: 10%;
+  background: rgba(45, 72, 152, 0.75);
+  filter: blur(200px);
+  transform: rotate(-53.13deg);
 }
 
-nav {
+.gradient-05 {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.04) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+/* aka glassmorphism */
+.glassProjects {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+/* ak feedback-gradient */
+.cardGradient {
   position: absolute;
-  top: 0;
-  left: 0;
+  width: 200px;
+  height: 316px;
+  left: 0px;
+  top: 0px;
+  background: #8d39a3;
+  filter: blur(175px);
+}
+
+.navbarGradient {
+  position: absolute;
+  width: 500px;
+  height: 100px;
+  left: 37%;
   bottom: 0;
-  width: 300px;
-}
-
-.background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 14rem;
-  background: #fff;
-}
-
-button {
-  outline: none;
-  border: none;
-  cursor: pointer;
-  position: fixed;
-  top: 15px;
-  left: 15px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-ul,
-li {
-  margin: 0;
-  padding: 0;
-}
-
-ul {
-  padding: 25px;
-  position: absolute;
-  top: 100px;
-  width: 230px;
-}
-
-li {
-  list-style: none;
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-
-.icon-placeholder {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  flex: 40px 0;
-  margin-right: 20px;
+  background: #65c4fa;
+  filter: blur(150px);
 }

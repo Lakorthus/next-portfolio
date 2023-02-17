@@ -5,6 +5,7 @@ const base: INavButton = {
   faIcon: faUser,
   path: '/',
   colorIndex: 1,
+  placeholder: 'GitHub',
 };
 
 export const mockNavButtonProps = {

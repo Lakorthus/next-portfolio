@@ -1,12 +1,12 @@
 'use client';
 import {
-  faCodepen,
   faGithub,
   faLinkedin,
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
 import {
   faEnvelope,
+  faFileDownload,
   faHome,
   faSuitcase,
   faUser,
@@ -15,20 +15,66 @@ import { motion } from 'framer-motion';
 import NavButton from '../../buttons/menuItem/NavButton';
 import { navigationVariants } from '../../utils/motion';
 
-export interface INavigation {}
+export interface INavigation {
+  className?: string;
+}
 
-const Navigation: React.FC<INavigation> = () => {
+const Navigation: React.FC<INavigation> = ({ className }) => {
   return (
     <>
-      <motion.ul variants={navigationVariants}>
-        <NavButton faIcon={faEnvelope} path={'/'} colorIndex={1} />
-        <NavButton faIcon={faHome} path={'/'} colorIndex={2} />
-        <NavButton faIcon={faSuitcase} path={'/'} colorIndex={3} />
-        <NavButton faIcon={faUser} path={'/'} colorIndex={4} />
-        <NavButton faIcon={faCodepen} path={'/'} colorIndex={5} />
-        <NavButton faIcon={faGithub} path={'/'} colorIndex={6} />
-        <NavButton faIcon={faLinkedin} path={'/'} colorIndex={7} />
-        <NavButton faIcon={faTwitter} path={'/'} colorIndex={8} />
+      <motion.ul
+        className={`menu menuMenuItem ${className}`}
+        variants={navigationVariants}
+      >
+        <NavButton
+          placeholder={'Home'}
+          faIcon={faHome}
+          path={'/'}
+          colorIndex={2}
+        />
+        <NavButton
+          placeholder={'About'}
+          faIcon={faUser}
+          path={'/'}
+          colorIndex={4}
+        />
+        <NavButton
+          placeholder={'Portfolio'}
+          faIcon={faSuitcase}
+          path={'/'}
+          colorIndex={3}
+        />
+        <NavButton
+          placeholder={'Contact'}
+          faIcon={faEnvelope}
+          path={'/'}
+          colorIndex={1}
+        />
+
+        <NavButton
+          placeholder={'Github'}
+          faIcon={faGithub}
+          path={'/'}
+          colorIndex={6}
+        />
+        <NavButton
+          placeholder={'Linked In'}
+          faIcon={faLinkedin}
+          path={'/'}
+          colorIndex={7}
+        />
+        <NavButton
+          placeholder={'Twitter'}
+          faIcon={faTwitter}
+          path={'/'}
+          colorIndex={8}
+        />
+        <NavButton
+          placeholder={'Download CV'}
+          faIcon={faFileDownload}
+          path={'/'}
+          colorIndex={5}
+        />
       </motion.ul>
     </>
   );

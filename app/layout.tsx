@@ -13,11 +13,7 @@ function RootLayout({
     <html lang="en">
       <body>
         <AuthProvider>
-          <PrimaryLayout justify="items-center">
-            {/* <Error /> */}
-
-            {children}
-          </PrimaryLayout>
+          <PrimaryLayout>{children}</PrimaryLayout>
         </AuthProvider>
       </body>
     </html>

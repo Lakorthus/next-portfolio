@@ -2,22 +2,14 @@ import Header from '../../navigation/header/Header';
 
 export interface IPrimaryLayout extends React.ComponentPropsWithoutRef<'div'> {
   children: React.ReactNode;
-  justify?: 'items-center' | 'items-start';
 }
 
-const PrimaryLayout: React.FC<IPrimaryLayout> = ({
-  children,
-  justify = 'items-center',
-  ...divProps
-}) => {
+const PrimaryLayout: React.FC<IPrimaryLayout> = ({ children, ...divProps }) => {
   return (
     <>
-      <div
-        {...divProps}
-        className={`min-h-screen flex flex-col lg:flex-row ${justify}`}
-      >
+      <div {...divProps} className={`primaryLayout`}>
         <Header />
-        <main className="relative w-full flex-1 flex justify-center items-center">
+        <main className="w-full h-screen flex flex-col justify-center items-center bg-neutral overflow-hidden">
           {children}
         </main>
       </div>

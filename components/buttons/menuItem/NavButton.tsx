@@ -8,53 +8,75 @@ import { navButtonVariants } from '../../utils/motion';
 export interface INavButton {
   faIcon: IconProp;
   path: string | '/';
-  classname?: string;
+  placeholder?: string;
   target?: boolean;
   colorIndex: number;
 }
 
+// const colors = [
+//   '#FF008C',
+//   '#D309E1',
+//   '#9C1AFF',
+//   '#7700FF',
+//   '#4400FF',
+//   '#FF008C',
+//   '#D309E1',
+//   '#9C1AFF',
+//   '#4400FF',
+// ];
 const colors = [
-  '#FF008C',
-  '#D309E1',
-  '#9C1AFF',
-  '#7700FF',
-  '#4400FF',
-  '#FF008C',
-  '#D309E1',
-  '#9C1AFF',
-  '#4400FF',
+  '#fff',
+  '#fff',
+  '#fff',
+  '#fff',
+  '#fff',
+  '#fff',
+  '#fff',
+  '#fff',
+  '#fff',
 ];
 
 const NavButton: React.FC<INavButton> = ({
   faIcon,
   path,
-  classname,
+  placeholder,
   target,
   colorIndex,
 }) => {
-  const style = { border: `2px solid ${colors[colorIndex]}` };
+  const style = {
+    border: `2px solid ${colors[colorIndex]}`,
+  };
+  const text = {
+    color: `${colors[colorIndex]}`,
+  };
 
   return (
     <motion.li
       variants={navButtonVariants}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
-      className="bg-slate-100"
+      className={`menuItem menuMenuItem`}
     >
-      <div className="icon-placeholder" style={style}>
+      <div className={`menuIcon`} style={style}>
         <Link
-          className="contact-link"
+          className="w-full flex items-center justify-center"
           href={path}
           {...(target ? { target: '_blank', rel: 'noreferrer' } : {})}
         >
-          <FontAwesomeIcon
-            icon={faIcon}
-            color="#4d4d4e"
-            className={`${classname}`}
-          />
+          <FontAwesomeIcon icon={faIcon} style={text} className={`flex-1`} />
         </Link>
       </div>
-      <div className="text-placeholder" style={style} />
+      <div className={`placeholder`} style={style}>
+        <Link
+          className="w-full flex items-center justify-center"
+          href={path}
+          {...(target ? { target: '_blank', rel: 'noreferrer' } : {})}
+        >
+          <h2 style={text} className={``}>
+            {placeholder}
+          </h2>
+        </Link>
+      </div>
     </motion.li>
   );
 };

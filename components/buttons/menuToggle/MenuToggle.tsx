@@ -9,7 +9,7 @@ const Path = (props: any) => (
   <motion.path
     fill="transparent"
     strokeWidth="3"
-    stroke={'#000'}
+    stroke={'#fff'}
     strokeLinecap="round"
     {...props}
   />
@@ -17,7 +17,7 @@ const Path = (props: any) => (
 
 const MenuToggle: React.FC<IMenuToggle> = ({ toggle }) => {
   return (
-    <button onClick={toggle}>
+    <button className={`menuToggle`} onClick={toggle}>
       <svg width="23" height="23" viewBox="0 0 23 23">
         <Path variants={toggleSvgVariant.one} />
         <Path
