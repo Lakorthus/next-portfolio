@@ -23,9 +23,11 @@ const Navigation: React.FC<INavigation> = ({ className }) => {
   return (
     <>
       <motion.ul
-        className={`menu menuMenuItem ${className}`}
+        className={`menu menuMenuItem  ${className}`}
         variants={navigationVariants}
       >
+        <div className="absolute w-full inset-0 gradient-01" />
+
         <NavButton
           placeholder={'Home'}
           faIcon={faHome}

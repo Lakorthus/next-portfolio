@@ -9,6 +9,7 @@ const PrimaryLayout: React.FC<IPrimaryLayout> = ({ children, ...divProps }) => {
     <>
       <div {...divProps} className={`primaryLayout`}>
         <Header />
+
         <main className="w-full h-screen flex flex-col justify-center items-center bg-neutral overflow-hidden">
           {children}
         </main>

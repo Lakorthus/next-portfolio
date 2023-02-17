@@ -7,16 +7,13 @@
     @apply border-0 p-2 px-6 bg-slate-100 rounded-md;
   }
   .sidebar {
-    @apply absolute top-0 left-0 bottom-0 z-10;
-  }
-  .sidebarBg {
-    @apply h-full absolute top-0 left-0 w-[15rem];
+    @apply absolute inset-0 z-10;
   }
   .menuToggle {
     @apply border-none cursor-pointer fixed top-4 left-4 w-[50px] h-[50px] rounded-full bg-transparent flex justify-center items-center;
   }
   .menu {
-    @apply absolute top-24 w-60 p-6 gap-y-2;
+    @apply absolute top-24  p-6 gap-y-2;
   }
   .menuItem {
     @apply list-none flex flex-row items-center cursor-pointer;
@@ -24,14 +21,14 @@
   .menuMenuItem {
     @apply m-0 p-2;
   }
-  .placeholder {
+  .placeHolder {
     @apply rounded-md h-5 flex-1 mr-2 py-4;
   }
   .menuIcon {
     @apply w-10 h-10 rounded-full flex items-center mr-5;
   }
   .primaryLayout {
-    @apply relative w-screen h-screen overflow-hidden p-0 m-0 flex justify-center items-center;
+    @apply relative w-screen h-screen p-0 m-0 flex justify-center items-center;
   }
 }
 * {
@@ -53,7 +50,7 @@
     hsl(221deg 73% 70%) 74%,
     hsl(220deg 76% 51%) 100%
   );
-  filter: blur(125px);
+  filter: blur(200px);
 }
 
 .hero-gradient {

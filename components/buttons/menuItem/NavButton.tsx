@@ -57,26 +57,26 @@ const NavButton: React.FC<INavButton> = ({
       whileTap={{ scale: 0.95 }}
       className={`menuItem menuMenuItem`}
     >
-      <div className={`menuIcon`} style={style}>
-        <Link
-          className="w-full flex items-center justify-center"
-          href={path}
-          {...(target ? { target: '_blank', rel: 'noreferrer' } : {})}
+      <Link
+        className="w-full flex items-center justify-start"
+        href={path}
+        {...(target ? { target: '_blank', rel: 'noreferrer' } : {})}
+      >
+        <div
+          className={`menuIcon glass flex items-center justify-center`}
+          style={style}
         >
-          <FontAwesomeIcon icon={faIcon} style={text} className={`flex-1`} />
-        </Link>
-      </div>
-      <div className={`placeholder`} style={style}>
-        <Link
-          className="w-full flex items-center justify-center"
-          href={path}
-          {...(target ? { target: '_blank', rel: 'noreferrer' } : {})}
+          <FontAwesomeIcon icon={faIcon} style={text} className={``} />
+        </div>
+        <div
+          className={`placeHolder glass w-[8rem] flex items-center justify-center`}
+          style={style}
         >
           <h2 style={text} className={``}>
             {placeholder}
           </h2>
-        </Link>
-      </div>
+        </div>
+      </Link>
     </motion.li>
   );
 };
