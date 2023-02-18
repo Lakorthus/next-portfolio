@@ -3,7 +3,7 @@
 import { motion, useCycle } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import MenuToggle from '../../buttons/menuToggle/MenuToggle';
-import { sidebarVariant } from '../../utils/motion';
+import { sidebarVariant } from '../../../utils/motion';
 import Navigation from '../navigationList/Navigation';
 
 export interface IHeader extends React.ComponentPropsWithoutRef<'header'> {}

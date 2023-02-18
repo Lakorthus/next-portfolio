@@ -7,10 +7,10 @@ export interface IPrimaryLayout extends React.ComponentPropsWithoutRef<'div'> {
 const PrimaryLayout: React.FC<IPrimaryLayout> = ({ children, ...divProps }) => {
   return (
     <>
-      <div {...divProps} className={`primaryLayout`}>
+      <div {...divProps} className={`overflow-hidden`}>
         <Header />
 
-        <main>{children}</main>
+        {children}
       </div>
     </>
   );

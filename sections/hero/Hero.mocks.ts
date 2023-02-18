@@ -1,8 +1,6 @@
 import { IHero } from './Hero';
 
-const base: IHero = {
-  sampleTextProp: 'Hello world!',
-};
+const base: IHero = {};
 
 export const mockHeroProps = {
   base,

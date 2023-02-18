@@ -11,7 +11,7 @@ function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className="">
         <AuthProvider>
           <PrimaryLayout>{children}</PrimaryLayout>
         </AuthProvider>

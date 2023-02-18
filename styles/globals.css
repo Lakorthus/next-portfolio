@@ -3,17 +3,19 @@
 @tailwind utilities;
 
 @layer components {
+  /* test */
   .btn-primary {
     @apply border-0 p-2 px-6 rounded-md;
   }
+  /* components */
   .sidebar {
-    @apply absolute inset-0 z-10;
+    @apply absolute inset-0 z-40;
   }
   .menuToggle {
-    @apply border-none cursor-pointer fixed top-4 left-4 w-[50px] h-[50px] rounded-full bg-transparent flex justify-center items-center;
+    @apply border-none cursor-pointer absolute top-4 left-4 w-[50px] h-[50px] rounded-full bg-transparent flex justify-center items-center z-40;
   }
   .menu {
-    @apply absolute top-20 left-0 p-6 gap-y-2;
+    @apply absolute top-20 left-0 p-6 gap-y-2 z-40;
   }
   .menuItem {
     @apply list-none flex flex-row items-center cursor-pointer;
@@ -21,16 +23,55 @@
   .menuMenuItem {
     @apply m-0 p-2;
   }
-  .placeHolder {
-    @apply rounded-md h-5 flex-1 mr-2 py-4;
-  }
   .menuIcon {
     @apply w-10 h-10 rounded-full flex items-center mr-5;
   }
-  .primaryLayout {
-    @apply relative w-screen h-screen p-0 m-0 flex justify-center items-center overflow-hidden;
+  /* sections */
+  /* hero  */
+  .heroHeading {
+    @apply font-bold flex items-center lg:text-[144px] md:text-[100px] sm:text-[60px] text-[44px] lg:leading-[158.4px] md:leading-[114.4px] sm:leading-[74.4px] leading-[64.4px] uppercase text-white;
+  }
+  .heroOText {
+    @apply md:w-[212px] sm:w-[80px] w-[60px] md:h-[108px] sm:h-[48px] h-[38px] md:border-[18px] border-[9px] rounded-full border-white sm:mx-2 mx-[6px];
   }
 }
+
+@layer utilities {
+  .placeHolder {
+    @apply rounded-md h-5 flex-1 mr-2 py-4;
+  }
+  .innerWidth {
+    @apply xl:max-w-[1280px] w-full;
+  }
+  .interWidth {
+    @apply lg:w-[80%] w-[100%];
+  }
+  .paddings {
+    @apply sm:p-16 xs:p-8 px-6 py-12;
+  }
+  .yPaddings {
+    @apply sm:py-16 xs:py-8 py-12;
+  }
+  .xPaddings {
+    @apply sm:px-16 px-6;
+  }
+  .topPaddings {
+    @apply sm:pt-16 xs:pt-8 pt-12;
+  }
+  .bottomPaddings {
+    @apply sm:pb-16 xs:pb-8 pb-12;
+  }
+  .flexCenter {
+    @apply flex justify-center items-center;
+  }
+  .flexStart {
+    @apply flex justify-start items-start;
+  }
+  .flexEnd {
+    @apply flex justify-end;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -56,9 +97,9 @@
 .hero-gradient {
   background: linear-gradient(
     97.86deg,
-    #a509ff 0%,
-    #34acc7 53.65%,
-    #a134c7 100%
+    hsl(284deg 70% 73%) 0%,
+    hsl(221deg 73% 70%) 53.65%,
+    hsl(220deg 76% 51%) 100%
   );
 }
 

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { toggleSvgVariant } from '../../utils/motion';
+import { toggleSvgVariant } from '../../../utils/motion';
 
 export interface IMenuToggle {
   toggle?: () => void;

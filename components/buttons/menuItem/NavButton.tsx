@@ -3,7 +3,7 @@ import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { navButtonVariants } from '../../utils/motion';
+import { navButtonVariants } from '../../../utils/motion';
 
 export interface INavButton {
   faIcon: IconProp;

@@ -13,7 +13,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
 import NavButton from '../../buttons/menuItem/NavButton';
-import { navigationVariants } from '../../utils/motion';
+import { navigationVariants } from '../../../utils/motion';
 
 export interface INavigation {
   className?: string;
