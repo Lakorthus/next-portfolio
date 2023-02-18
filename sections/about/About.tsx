@@ -6,7 +6,7 @@ export interface IAbout {}
 
 const About: React.FC<IAbout> = () => {
   return (
-    <section>
+    <section className="paddings relative z-10">
       <motion.div
         variants={staggerContainer(0.1, 0.1)}
         initial="hidden"
@@ -14,8 +14,7 @@ const About: React.FC<IAbout> = () => {
         viewport={{ once: false, amount: 0.25 }}
         className={`innerWidth mx-auto flexCenter flex-col`}
       >
-        {/* <TypingText title="| About Metaversus" textStyles="text-center" /> */}
-
+        <h1 className="textCenter">| About Me</h1>
         <motion.p
           variants={fadeIn('up', 'tween', 0.2, 1)}
           className="mt-[8px] font-normal sm:text-[32px] text-[20px] text-center text-secondary-white"

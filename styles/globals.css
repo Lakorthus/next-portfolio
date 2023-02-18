@@ -159,15 +159,3 @@
   background: #8d39a3;
   filter: blur(175px);
 }
-
-#root {
-  height: 500vh;
-}
-
-.container {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
