@@ -1,4 +1,4 @@
 import About from './about/About';
 import Hero from './hero/Hero';
-
-export { Hero, About };
+import Projects from './projects/Projects';
+export { Hero, About, Projects };
