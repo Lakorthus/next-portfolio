@@ -1,11 +1,12 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 import { fadeIn } from '../../../utils/motion';
 export interface IHomeCard {
   id: string;
-  imgUrl?: string;
+  imgUrl: string;
   title: string;
 
   index: number;
@@ -30,11 +31,14 @@ const HomeCard: React.FC<IHomeCard> = ({
       } flex items-center justify-center min-w-[170px] h-[700px] transition-[flex] duration-[0.7s] ease-out-flex cursor-pointer`}
       onClick={() => handleClick(id)}
     >
-      {/* <img
+      <Image
         src={imgUrl}
-        alt="planet-04"
-        className="absolute w-full h-full object-cover rounded-[24px]"
-      /> */}
+        alt="image-project"
+        width={640}
+        height={480}
+        className="absolute w-full h-full object-contain rounded-[24px]"
+        priority
+      />
       {active !== id ? (
         <h3 className="font-semibold sm:text-[26px] text-[18px] text-white absolute z-0 lg:bottom-20 lg:rotate-[-90deg] lg:origin-[0,0]">
           {title}
@@ -42,7 +46,7 @@ const HomeCard: React.FC<IHomeCard> = ({
       ) : (
         <div className="absolute bottom-0 p-8 flex justify-start w-full flex-col bg-[rgba(0,0,0,0.5)] rounded-b-[24px]">
           <div
-            className={`flexCenter w-[60px] h-[60px] rounded-[24px] glassmorphism mb-[16px]`}
+            className={`flexCenter w-[60px] h-[60px] rounded-[24px] glassProjects mb-[16px]`}
           >
             {/* <img
               src="/vercel.svg"

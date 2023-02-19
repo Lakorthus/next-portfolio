@@ -1,29 +1,39 @@
 'use client';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import AboutList from '../../components/aboutList/AboutList';
-import { fadeIn, staggerContainer, textVariant2 } from '../../utils/motion';
+import { imageMe, staggerContainer, textVariant2 } from '../../utils/motion';
 
 export interface IAbout {}
 
 const About: React.FC<IAbout> = () => {
   return (
-    <section className="paddings relative z-10">
+    <section className="paddings relative z-10 flexCenter flex-col min-h-[75vh]">
+      <motion.h2
+        variants={textVariant2}
+        initial="hidden"
+        whileInView="show"
+        className={`my-4 font-bold md:text-[40px] text-[34px] text-white md:my-8`}
+      >
+        About me
+      </motion.h2>
       <motion.div
         variants={staggerContainer(0.1, 0.1)}
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
-        className={`innerWidth mx-auto flexCenter flex-col`}
+        className={`innerWidth mx-auto`}
       >
-        <motion.h2
-          variants={textVariant2}
-          initial="hidden"
-          whileInView="show"
-          className={`my-4 font-bold md:text-[40px] text-[34px] text-white md:my-8`}
-        >
-          About me
-        </motion.h2>
-
+        <motion.div variants={imageMe('left')} className={`flex-1 flexCenter`}>
+          <Image
+            src="/Google.png"
+            alt="get-started"
+            width={640}
+            height={480}
+            className="w-[90%] h-[90%] object-contain py-5"
+            priority
+          />
+        </motion.div>
         <div
           className={`flex flex-col w-full md:grid grid-cols-3 gap-4 mt-2 md:mt-6 lg:mt-8`}
         >
@@ -46,13 +56,6 @@ const About: React.FC<IAbout> = () => {
             number={3}
           />
         </div>
-
-        <motion.img
-          variants={fadeIn('up', 'tween', 0.3, 1)}
-          src="/vercel.svg"
-          alt="arrow down"
-          className="w-[18px] h-[28px] object-contain mt-[28px]"
-        />
       </motion.div>
     </section>
   );

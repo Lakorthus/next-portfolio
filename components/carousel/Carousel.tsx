@@ -48,7 +48,7 @@ const Carousel: React.FC<ICarousel> = () => {
               alt="Drink"
               width={640}
               height={480}
-              className="w-full sm:h-[500px] h-[350px] object-cover  z-10 relative bg-neutral"
+              className="w-full sm:h-[500px] h-[350px] object-cover  z-10 relative"
               priority
             />
           </div>
