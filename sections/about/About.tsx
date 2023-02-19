@@ -1,6 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
-import { fadeIn, staggerContainer } from '../../utils/motion';
+import AboutList from '../../components/aboutList/AboutList';
+import { fadeIn, staggerContainer, textVariant2 } from '../../utils/motion';
 
 export interface IAbout {}
 
@@ -14,25 +15,20 @@ const About: React.FC<IAbout> = () => {
         viewport={{ once: false, amount: 0.25 }}
         className={`innerWidth mx-auto flexCenter flex-col`}
       >
-        <h1 className="textCenter">| About Me</h1>
-        <motion.p
-          variants={fadeIn('up', 'tween', 0.2, 1)}
-          className="mt-[8px] font-normal sm:text-[32px] text-[20px] text-center text-secondary-white"
+        <motion.h2
+          variants={textVariant2}
+          initial="hidden"
+          whileInView="show"
+          className={`mt-[8px] font-bold md:text-[64px] text-[40px] text-white `}
         >
-          <span className="font-extrabold text-white">Metaverse</span> is a new
-          thing in the future, where you can enjoy the virtual world by feeling
-          like really real, you can feel what you feel in this metaverse world,
-          because this is really the{' '}
-          <span className="font-extrabold text-white">
-            madness of the metaverse
-          </span>{' '}
-          of today, using only{' '}
-          <span className="font-extrabold text-white">VR</span> devices you can
-          easily explore the metaverse world you want, turn your dreams into
-          reality. Lets{' '}
-          <span className="font-extrabold text-white">explore</span> the madness
-          of the metaverse by scrolling down
-        </motion.p>
+          | About Me as a Developer
+        </motion.h2>
+
+        <div className={`flexCenter w-full flex flex-col md:flex-row gap-3`}>
+          <AboutList text={'About 1 Lorem imput Lorem imput'} number={1} />
+          <AboutList text={'About 2Lorem imput Lorem imput'} number={2} />
+          <AboutList text={'About 3 Lorem imput'} number={3} />
+        </div>
 
         <motion.img
           variants={fadeIn('up', 'tween', 0.3, 1)}
