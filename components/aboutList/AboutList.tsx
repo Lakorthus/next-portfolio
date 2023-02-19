@@ -16,7 +16,7 @@ const AboutList: React.FC<IAboutList> = ({ text, number }) => {
     deleteSpeed: 100,
   });
   return (
-    <>
+    <div className="relative flexCenter">
       <div
         className={`flexCenter w-[70px] h-[70px] rounded-[24px] bg-[#323F5D]`}
       >
@@ -27,16 +27,15 @@ const AboutList: React.FC<IAboutList> = ({ text, number }) => {
           {number}
         </motion.p>
       </div>
-      <div>
-        <motion.p
-          variants={fadeIn('up', 'tween', 0.2, 1)}
-          className="flex-1 ml-[30px] font-normal text-[18px] text-[#B0B0B0] leading-[32.4px]"
-        >
-          {useText}
-          <Cursor cursorColor="orange" />
-        </motion.p>
-      </div>
-    </>
+
+      <motion.p
+        variants={fadeIn('up', 'tween', 0.2, 1)}
+        className=" ml-[30px] font-normal md:text-[30px] text-[24px] text-[#B0B0B0] leading-[32.4px]"
+      >
+        {useText}
+        <Cursor cursorColor="orange" />
+      </motion.p>
+    </div>
   );
 };
 

@@ -19,15 +19,32 @@ const About: React.FC<IAbout> = () => {
           variants={textVariant2}
           initial="hidden"
           whileInView="show"
-          className={`mt-[8px] font-bold md:text-[64px] text-[40px] text-white `}
+          className={`my-4 font-bold md:text-[40px] text-[34px] text-white md:my-8`}
         >
-          | About Me as a Developer
+          About me
         </motion.h2>
 
-        <div className={`flexCenter w-full flex flex-col md:flex-row gap-3`}>
-          <AboutList text={'About 1 Lorem imput Lorem imput'} number={1} />
-          <AboutList text={'About 2Lorem imput Lorem imput'} number={2} />
-          <AboutList text={'About 3 Lorem imput'} number={3} />
+        <div
+          className={`flex flex-col w-full md:grid grid-cols-3 gap-4 mt-2 md:mt-6 lg:mt-8`}
+        >
+          <AboutList
+            text={
+              'About 1 Lorem imput Lorem imput.About 1 Lorem imput Lorem imput.'
+            }
+            number={1}
+          />
+          <AboutList
+            text={
+              'About 2 Lorem imput Lorem imput.About 1 Lorem imput Lorem imput.'
+            }
+            number={2}
+          />
+          <AboutList
+            text={
+              'About 3 Lorem imput Lorem imputAbout 1 Lorem imput Lorem imput..'
+            }
+            number={3}
+          />
         </div>
 
         <motion.img
