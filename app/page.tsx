@@ -1,3 +1,4 @@
+'use client';
 import { About, Hero, Projects } from '../sections/';
 
 const Home = () => {

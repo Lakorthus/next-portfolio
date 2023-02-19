@@ -32,6 +32,9 @@ module.exports = {
           tertiary: '#FBBF24',
           hot: '#37392e',
           light: '#EAEEF3',
+          pink: '#F637EC',
+          blue: '#3330E4',
+          yellow: '#FAEA48',
         },
 
         dark: {

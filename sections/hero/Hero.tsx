@@ -1,5 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
+import NeonCard from '../../components/cards/neon/NeonCard';
 import Carousel from '../../components/carousel/Carousel';
 import { slideIn, staggerContainer, textVariant } from '../../utils/motion';
 export interface IHero {}
@@ -34,7 +35,7 @@ const Hero: React.FC<IHero> = () => {
           variants={slideIn('right', 'tween', 0.2, 1)}
           className="relative right-0 w-full "
         >
-          <div className="absolute w-full right-0 h-[300px] hero-gradient rounded-tl-[140px] z-[0] -top-[30px] " />
+          <NeonCard />
           <Carousel />
         </motion.div>
       </motion.div>
