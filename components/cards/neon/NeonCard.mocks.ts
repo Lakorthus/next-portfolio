@@ -1,7 +1,7 @@
 import { INeonCard } from './NeonCard';
 
 const base: INeonCard = {
-  sampleTextProp: 'Hello world!',
+  children: 'Neon Card',
 };
 
 export const mockNeonCardProps = {

@@ -5,13 +5,13 @@ import '../styles/globals.css';
 export default function FourOhFour() {
   return (
     <>
-      <PrimaryLayout>
-        <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center">
+        <PrimaryLayout>
           <h1>404 - Page Not Found</h1>
 
           <Link href="/">Go back home</Link>
-        </div>
-      </PrimaryLayout>
+        </PrimaryLayout>
+      </div>
     </>
   );
 }

@@ -3,7 +3,7 @@ import HomeCard, { IHomeCard } from './HomeCard';
 import { mockHomeCardProps } from './HomeCard.mocks';
 
 export default {
-  title: 'templates/HomeCard',
+  title: 'cards/HomeCard',
   component: HomeCard,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},

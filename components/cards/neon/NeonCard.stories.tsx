@@ -3,7 +3,7 @@ import NeonCard, { INeonCard } from './NeonCard';
 import { mockNeonCardProps } from './NeonCard.mocks';
 
 export default {
-  title: 'templates/NeonCard',
+  title: 'cards/NeonCard',
   component: NeonCard,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},
