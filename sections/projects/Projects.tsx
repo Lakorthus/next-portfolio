@@ -52,7 +52,7 @@ const Projects: React.FC<IProjects> = () => {
         viewport={{ once: false, amount: 0.25 }}
         className={`innerWidth mx-auto flex flex-col`}
       >
-        <div className="mt-[50px] flex lg:flex-row flex-col min-h-[50vh] gap-5">
+        <div className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5">
           {exploreprojects.map((project, index) => (
             <HomeCard
               key={project.id}

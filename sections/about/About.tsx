@@ -8,7 +8,10 @@ export interface IAbout {}
 
 const About: React.FC<IAbout> = () => {
   return (
-    <section className="paddings relative z-10 flexCenter flex-col min-h-[75vh]">
+    <section
+      id="about"
+      className="paddings relative z-10 flexCenter flex-col min-h-[75vh]"
+    >
       <motion.h2
         variants={textVariant2}
         initial="hidden"

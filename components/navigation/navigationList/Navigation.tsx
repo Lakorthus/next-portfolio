@@ -12,8 +12,8 @@ import {
   faUser,
 } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
-import NavButton from '../../buttons/menuItem/NavButton';
 import { navigationVariants } from '../../../utils/motion';
+import NavButton from '../../buttons/menuItem/NavButton';
 
 export interface INavigation {
   className?: string;
@@ -37,7 +37,7 @@ const Navigation: React.FC<INavigation> = ({ className }) => {
         <NavButton
           placeholder={'About'}
           faIcon={faUser}
-          path={'/'}
+          path={'#about'}
           colorIndex={4}
         />
         <NavButton

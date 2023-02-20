@@ -7,9 +7,11 @@ export default function FourOhFour() {
     <>
       <div className="flex flex-col items-center">
         <PrimaryLayout>
-          <h1>404 - Page Not Found</h1>
+          <div className="flexCenter">
+            <h1>404 - Page Not Found</h1>
 
-          <Link href="/">Go back home</Link>
+            <Link href="/">Go back home</Link>
+          </div>
         </PrimaryLayout>
       </div>
     </>
