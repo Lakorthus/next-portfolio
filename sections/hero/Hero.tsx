@@ -1,7 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
-import NeonCard from '../../components/cards/neon/NeonCard';
-import Carousel from '../../components/carousel/Carousel';
+import { Carousel, NeonCard } from '../../components';
 import { slideIn, staggerContainer, textVariant } from '../../utils/motion';
 export interface IHero {}
 

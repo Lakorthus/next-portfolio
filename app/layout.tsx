@@ -1,4 +1,4 @@
-import PrimaryLayout from '../components/layouts/primary/PrimaryLayout';
+import { PrimaryLayout } from '../components';
 import { AuthProvider } from '../context/auth/AuthContext';
 import '../styles/globals.css';
 

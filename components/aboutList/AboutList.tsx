@@ -1,3 +1,4 @@
+'use client';
 import { motion } from 'framer-motion';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
 import { fadeIn } from '../../utils/motion';

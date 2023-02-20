@@ -1,7 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import AboutList from '../../components/aboutList/AboutList';
+import { AboutList } from '../../components/';
 import { imageMe, staggerContainer, textVariant2 } from '../../utils/motion';
 
 export interface IAbout {}
