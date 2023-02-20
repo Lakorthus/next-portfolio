@@ -9,34 +9,34 @@ export interface IProjects {}
 export const exploreprojects = [
   {
     id: 'project-1',
-    imgUrl: '/google.png',
+    imgUrl: '/frame.svg',
     title: 'The Hogwarts',
   },
   {
     id: 'project-2',
-    imgUrl: '/google.png',
+    imgUrl: '/frame.svg',
     title: 'The Upside Down',
   },
   {
     id: 'project-3',
-    imgUrl: '/google.png',
+    imgUrl: '/frame.svg',
     title: 'Kadirojo Permai',
   },
   {
     id: 'project-4',
-    imgUrl: '/google.png',
+    imgUrl: '/frame.svg',
     title: 'Paradise Island',
   },
   {
     id: 'project-5',
-    imgUrl: '/google.png',
+    imgUrl: '/frame.svg',
     title: 'Hawkins Labs',
   },
 ];
 const Projects: React.FC<IProjects> = () => {
   const [active, setActive] = useState('project-2');
   return (
-    <section className={`flexCenter flex-col paddings`} id="explore">
+    <section className={`flexCenter flex-col paddings relative`} id="projects">
       <motion.h2
         variants={textVariant2}
         initial="hidden"

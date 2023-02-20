@@ -26,16 +26,16 @@ const About: React.FC<IAbout> = () => {
       >
         <motion.div variants={imageMe('left')} className={`flex-1 flexCenter`}>
           <Image
-            src="/Google.png"
+            src="/avatar.png"
             alt="get-started"
-            width={640}
+            width={380}
             height={480}
-            className="w-[90%] h-[90%] object-contain py-5"
+            className=" object-contain py-5"
             priority
           />
         </motion.div>
         <div
-          className={`flex flex-col w-full md:grid grid-cols-3 gap-4 mt-2 md:mt-6 lg:mt-8`}
+          className={`flex flex-col w-full min-h-[16rem] md:grid grid-cols-3 gap-4 mt-2 md:mt-6 lg:mt-8`}
         >
           <AboutList
             text={

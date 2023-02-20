@@ -35,7 +35,7 @@ const HomeCard: React.FC<IHomeCard> = ({
         src={imgUrl}
         alt="image-project"
         width={640}
-        height={480}
+        height={640}
         className="absolute w-full h-full object-contain rounded-[24px]"
         priority
       />
@@ -44,22 +44,11 @@ const HomeCard: React.FC<IHomeCard> = ({
           {title}
         </h3>
       ) : (
-        <div className="absolute bottom-0 p-8 flex justify-start w-full flex-col bg-[rgba(0,0,0,0.5)] rounded-b-[24px]">
-          <div
-            className={`flexCenter w-[60px] h-[60px] rounded-[24px] glassProjects mb-[16px]`}
-          >
-            {/* <img
-              src="/vercel.svg"
-              alt="headset"
-              className="w-1/2 h-1/2 object-contain"
-            /> */}
-          </div>
-          <p className="font-normal text-[16px] leading-[20.16px] text-white uppercase">
-            Enter Metaverse
-          </p>
-          <h2 className="mt-[24px] font-semibold sm:text-[32px] text-[24px] text-white">
+        <div className="absolute bottom-0 p-8 flexCenter w-full flex-col bg-[rgba(0,0,0,0.5)] rounded-b-[24px]">
+          <h2 className="mt-[14px] font-semibold sm:text-[22px] text-[18px] text-white">
             {title}
           </h2>
+          <div className="cardGradient z-10" />
         </div>
       )}
     </motion.div>

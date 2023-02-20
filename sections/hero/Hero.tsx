@@ -7,7 +7,7 @@ export interface IHero {}
 
 const Hero: React.FC<IHero> = () => {
   return (
-    <section className={`yPaddings pl-16 md:pl-32  lg:pl-72`}>
+    <section id="hero" className={`yPaddings pl-16 md:pl-32  lg:pl-72`}>
       <div className="gradient-02 z-0" />
 
       <motion.div
