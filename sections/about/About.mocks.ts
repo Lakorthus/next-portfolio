@@ -1,8 +1,6 @@
 import { IAbout } from './About';
 
-const base: IAbout = {
-  sampleTextProp: 'Hello world!',
-};
+const base: IAbout = {};
 
 export const mockAboutProps = {
   base,

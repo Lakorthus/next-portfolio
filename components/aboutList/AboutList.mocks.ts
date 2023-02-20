@@ -1,7 +1,7 @@
 import { IAboutList } from './AboutList';
 
 const base: IAboutList = {
-  text: 'About List',
+  text: 'Hello Jason',
   number: 1,
 };
 
