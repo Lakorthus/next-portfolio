@@ -1,13 +1,13 @@
 'use client';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import '../../styles/contact.scss';
 import {
   fadeIn,
   imageMe,
   staggerContainer,
   textVariant2,
 } from '../../utils/motion';
-import './contact.scss';
 
 export interface IContact {}
 
@@ -15,7 +15,7 @@ const Contact: React.FC<IContact> = () => {
   return (
     <section
       id="contact"
-      className="paddings relative z-10 flexCenter flex-col min-h-[75vh]"
+      className="paddings relative z-10 flexCenter flex-col min-h-[95vh]"
     >
       <motion.h2
         variants={textVariant2}
@@ -35,14 +35,14 @@ const Contact: React.FC<IContact> = () => {
       >
         <motion.div
           variants={fadeIn('up', 'tween', 0.3, 1)}
-          className="relative mt-[68px] flex w-full h-[550px]"
+          className="relative mt-3 flex-1 flexCenter w-full min-h-[30vh]"
         >
           <Image
             src="/map.png"
             alt="map"
             width={640}
             height={550}
-            className="w-full h-full object-cover"
+            className="w-auto object-cover"
             priority
           />
         </motion.div>
@@ -67,7 +67,7 @@ const Contact: React.FC<IContact> = () => {
             <div className="shadow"></div>
           </div>
         </motion.div>
-        <div className="center table w-full animate-pulse h-40 z-0">
+        <div className="table w-full h-40  animate-pulse z-0">
           <div className="monitor bg-neutral center">
             <p className="text text-secondary">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

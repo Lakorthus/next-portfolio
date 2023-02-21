@@ -1,6 +1,6 @@
 'use client';
 
-const Projects = () => {
+const About = () => {
   return (
     <div className="overflow-hidden">
       <h1>Hello</h1>
@@ -8,4 +8,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default About;

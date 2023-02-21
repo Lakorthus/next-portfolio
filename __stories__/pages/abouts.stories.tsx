@@ -1,8 +1,8 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import RootLayout from '../../app/projects/page';
+import RootLayout from '../../app/about/page';
 
 export default {
-  title: 'app/Projects',
+  title: 'app/About',
   component: RootLayout,
   argTypes: {},
 } as ComponentMeta<typeof RootLayout>;

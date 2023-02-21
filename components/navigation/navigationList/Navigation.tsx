@@ -37,39 +37,42 @@ const Navigation: React.FC<INavigation> = ({ className }) => {
         <NavButton
           placeholder={'About'}
           faIcon={faUser}
-          path={'#about'}
+          path={'/about'}
           colorIndex={4}
         />
         <NavButton
           placeholder={'Portfolio'}
           faIcon={faSuitcase}
-          path={'/'}
+          path={'/portfolio'}
           colorIndex={3}
         />
         <NavButton
           placeholder={'Contact'}
           faIcon={faEnvelope}
-          path={'/'}
+          path={'/contact'}
           colorIndex={1}
         />
 
         <NavButton
           placeholder={'Github'}
           faIcon={faGithub}
-          path={'/'}
+          path={'https://github.com/Lakorthus'}
           colorIndex={6}
+          target
         />
         <NavButton
-          placeholder={'Linked In'}
+          placeholder={'LinkedIn'}
           faIcon={faLinkedin}
-          path={'/'}
+          path={'https://www.linkedin.com/in/jv-frontend-developer/'}
           colorIndex={7}
+          target
         />
         <NavButton
           placeholder={'Twitter'}
           faIcon={faTwitter}
-          path={'/'}
+          path={'https://twitter.com/Lakorthus'}
           colorIndex={8}
+          target
         />
         <NavButton
           placeholder={'Download CV'}

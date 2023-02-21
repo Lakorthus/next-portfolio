@@ -33,7 +33,7 @@ const About: React.FC<IAbout> = () => {
             alt="get-started"
             width={380}
             height={480}
-            className=" object-contain py-5"
+            className="w-auto object-contain py-5"
             priority
           />
         </motion.div>

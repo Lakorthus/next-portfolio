@@ -13,17 +13,6 @@ export interface INavButton {
   colorIndex: number;
 }
 
-// const colors = [
-//   '#FF008C',
-//   '#D309E1',
-//   '#9C1AFF',
-//   '#7700FF',
-//   '#4400FF',
-//   '#FF008C',
-//   '#D309E1',
-//   '#9C1AFF',
-//   '#4400FF',
-// ];
 const colors = [
   '#fff',
   '#fff',
