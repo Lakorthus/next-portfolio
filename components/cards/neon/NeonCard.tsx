@@ -47,7 +47,7 @@ const NeonCard: React.FC<INeonCard> = ({ children }) => {
   return (
     <>
       <div
-        className={`absolute w-full right-0 h-[360px] md:h-[420px] lg:h-[490px] rounded-tl-[140px] z-[0] -top-[20px] border-y-4 border-l-4  ${border}  ${shadow} transition-all duration-1000 ${background} bg-opacity-20`}
+        className={`absolute w-full right-0 h-[360px] md:h-[420px] lg:h-[490px] rounded-tl-[140px] z-[0] border-y-4 border-l-4  ${border}  ${shadow} transition-all duration-1000 ${background} bg-opacity-20`}
       >
         <div className={`w-full h-full rounded-tl-[140px] opacity-50 glass`} />
         {children}
