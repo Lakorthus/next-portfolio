@@ -1,5 +1,5 @@
 import { PrimaryLayout } from '../components';
-import { AuthProvider } from '../context/auth/AuthContext';
+import '../styles/contact.scss';
 import '../styles/globals.css';
 
 function RootLayout({
@@ -12,9 +12,7 @@ function RootLayout({
   return (
     <html lang="en">
       <body>
-        <AuthProvider>
-          <PrimaryLayout>{children}</PrimaryLayout>
-        </AuthProvider>
+        <PrimaryLayout>{children}</PrimaryLayout>
       </body>
     </html>
   );

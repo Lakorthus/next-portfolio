@@ -19,10 +19,7 @@ module.exports = {
       lg: '1200px',
       xl: '1536px',
     },
-    fontFamily: {
-      sans: ['Arial', 'sans-serif'],
-      serif: ['Garamond', 'serif'],
-    },
+
     extend: {
       colors: {
         // Ligth theme

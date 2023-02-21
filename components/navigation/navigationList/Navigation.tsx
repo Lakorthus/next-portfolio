@@ -13,7 +13,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
 import { navigationVariants } from '../../../utils/motion';
-import NavButton from '../../buttons/menuItem/NavButton';
+import NavButton from '../../buttons/navButton/NavButton';
 
 export interface INavigation {
   className?: string;
@@ -22,7 +22,7 @@ export interface INavigation {
 const Navigation: React.FC<INavigation> = ({ className }) => {
   return (
     <>
-      <motion.ul
+      <motion.div
         className={`menu menuMenuItem  ${className}`}
         variants={navigationVariants}
       >
@@ -80,7 +80,7 @@ const Navigation: React.FC<INavigation> = ({ className }) => {
           path={'/'}
           colorIndex={5}
         />
-      </motion.ul>
+      </motion.div>
     </>
   );
 };

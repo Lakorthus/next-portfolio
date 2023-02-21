@@ -1,7 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import '../../styles/contact.scss';
+
 import {
   fadeIn,
   imageMe,
@@ -42,7 +42,7 @@ const Contact: React.FC<IContact> = () => {
             alt="map"
             width={640}
             height={550}
-            className="w-auto object-cover"
+            className="w-full h-auto object-cover"
             priority
           />
         </motion.div>

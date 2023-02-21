@@ -1,4 +1,4 @@
-import Header from '../../navigation/header/Header';
+import { Header } from '../../index';
 
 export interface IPrimaryLayout extends React.ComponentPropsWithoutRef<'div'> {
   children: React.ReactNode;

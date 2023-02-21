@@ -40,7 +40,7 @@ const NavButton: React.FC<INavButton> = ({
   };
 
   return (
-    <motion.li
+    <motion.div
       variants={navButtonVariants}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
@@ -55,18 +55,16 @@ const NavButton: React.FC<INavButton> = ({
           className={`menuIcon glass flex items-center justify-center`}
           style={style}
         >
-          <FontAwesomeIcon icon={faIcon} style={text} className={``} />
+          <FontAwesomeIcon icon={faIcon} style={text} />
         </div>
         <div
           className={`placeHolder glass w-[8rem] flex items-center justify-center`}
           style={style}
         >
-          <h2 style={text} className={``}>
-            {placeholder}
-          </h2>
+          <h2 style={text}>{placeholder}</h2>
         </div>
       </Link>
-    </motion.li>
+    </motion.div>
   );
 };
 

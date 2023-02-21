@@ -2,13 +2,13 @@
 
 import { motion, useCycle } from 'framer-motion';
 import { useEffect, useState } from 'react';
-import MenuToggle from '../../buttons/menuToggle/MenuToggle';
 import { sidebarVariant } from '../../../utils/motion';
+import MenuToggle from '../../buttons/menuToggle/MenuToggle';
 import Navigation from '../navigationList/Navigation';
 
 export interface IHeader extends React.ComponentPropsWithoutRef<'header'> {}
 
-const Header: React.FC<IHeader> = ({ className, ...headerProps }) => {
+const Header: React.FC<IHeader> = ({ ...headerProps }) => {
   const [isOpen, toggleOpen] = useCycle(false, true);
 
   //loader
@@ -20,7 +20,7 @@ const Header: React.FC<IHeader> = ({ className, ...headerProps }) => {
   }, []);
 
   return (
-    <header {...headerProps} className={`${className}`}>
+    <header {...headerProps}>
       <motion.nav
         initial={isLoading ? false : true}
         animate={isOpen || isLoading ? 'closed' : 'open'}
