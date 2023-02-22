@@ -48,7 +48,6 @@ const HomeCard: React.FC<IHomeCard> = ({
           <h2 className="mt-[14px] font-semibold sm:text-[22px] text-[18px] text-white">
             {title}
           </h2>
-          <div className="cardGradient z-10" />
         </div>
       )}
     </motion.div>
