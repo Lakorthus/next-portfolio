@@ -2,8 +2,8 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { AboutList } from '../../components/';
+import avatar from '../../public/avatar.png';
 import { imageMe, staggerContainer, textVariant2 } from '../../utils/motion';
-
 export interface IAbout {}
 
 const About: React.FC<IAbout> = () => {
@@ -29,10 +29,8 @@ const About: React.FC<IAbout> = () => {
       >
         <motion.div variants={imageMe('left')} className={`flex-1 flexCenter`}>
           <Image
-            src="/avatar.png"
+            src={avatar}
             alt="get-started"
-            width={380}
-            height={480}
             className="w-auto object-contain py-5"
             priority
           />

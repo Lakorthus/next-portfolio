@@ -34,8 +34,6 @@ const HomeCard: React.FC<IHomeCard> = ({
       <Image
         src={imgUrl}
         alt="image-project"
-        width={640}
-        height={640}
         className="absolute w-full h-full object-contain rounded-[24px]"
         priority
       />

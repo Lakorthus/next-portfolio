@@ -1,9 +1,13 @@
 'use client';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
+import cartoonPic1 from '../../public/cartoon1.svg';
+import cartoonPic2 from '../../public/cartoon2.svg';
+import cartoonPic3 from '../../public/cartoon3.svg';
+
 export interface ICarousel {}
 
-const imageNumber = ['/cartoon1.svg', '/cartoon2.svg', '/cartoon3.svg'];
+const imageNumber: Array<string> = [cartoonPic1, cartoonPic2, cartoonPic3];
 const delay = 2500;
 
 const Carousel: React.FC<ICarousel> = () => {
@@ -37,13 +41,11 @@ const Carousel: React.FC<ICarousel> = () => {
         className="whitespace-nowrap transition-all duration-500 ease-in-out transform "
         style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
       >
-        {imageNumber.map((image, index) => (
+        {imageNumber.map((image: string, index: number) => (
           <div className="inline-block h-96 w-full" key={index}>
             <Image
               src={image}
               alt="cartoon image"
-              width={640}
-              height={480}
               className="w-full lg:h-[480px] md:h-[400px] h-[350px] object-cover  z-10 "
               priority
             />

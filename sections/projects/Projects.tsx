@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { HomeCard } from '../../components';
+import projectOne from '../../public/frame.svg';
 import { staggerContainer, textVariant2 } from '../../utils/motion';
 
 export interface IProjects {}
@@ -9,27 +10,27 @@ export interface IProjects {}
 export const exploreprojects = [
   {
     id: 'project-1',
-    imgUrl: '/frame.svg',
+    imgUrl: projectOne,
     title: 'The Hogwarts',
   },
   {
     id: 'project-2',
-    imgUrl: '/frame.svg',
+    imgUrl: projectOne,
     title: 'The Upside Down',
   },
   {
     id: 'project-3',
-    imgUrl: '/frame.svg',
+    imgUrl: projectOne,
     title: 'Kadirojo Permai',
   },
   {
     id: 'project-4',
-    imgUrl: '/frame.svg',
+    imgUrl: projectOne,
     title: 'Paradise Island',
   },
   {
     id: 'project-5',
-    imgUrl: '/frame.svg',
+    imgUrl: projectOne,
     title: 'Hawkins Labs',
   },
 ];

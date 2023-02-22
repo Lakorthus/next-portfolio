@@ -7,12 +7,6 @@ import { fadeIn, staggerContainer, textVariant2 } from '../../utils/motion';
 export interface IContact {}
 
 const Contact: React.FC<IContact> = () => {
-  const current = new Date();
-  const date = `${current.getDate()}/${
-    current.getMonth() + 1
-  }/${current.getFullYear()}`;
-  const time = current.getHours() + ':' + current.getMinutes();
-
   return (
     <section
       id="contact"
@@ -50,7 +44,7 @@ const Contact: React.FC<IContact> = () => {
         <div className="table w-full h-40  animate-pulse z-0">
           <div className=" bg-neutral absolute top-0 left-0 right-0 bottom-0 m-auto w-full h-20 flex items-center justify-center overflow-hidden whitespace-nowrap monitor ">
             <p className="monitorText text-secondary">
-              {time + ' | ' + date + time + ' | ' + date + time + ' | ' + date}
+              JavaScript, React, Next.js, TypeScript, TailwindCSS, Framer Motion
             </p>
           </div>
         </div>
