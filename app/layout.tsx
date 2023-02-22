@@ -1,5 +1,4 @@
 import { PrimaryLayout } from '../components';
-import '../styles/contact.scss';
 import '../styles/globals.css';
 
 function RootLayout({

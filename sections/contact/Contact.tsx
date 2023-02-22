@@ -2,12 +2,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
-import {
-  fadeIn,
-  imageMe,
-  staggerContainer,
-  textVariant2,
-} from '../../utils/motion';
+import { fadeIn, staggerContainer, textVariant2 } from '../../utils/motion';
 
 export interface IContact {}
 
@@ -52,37 +47,16 @@ const Contact: React.FC<IContact> = () => {
             priority
           />
         </motion.div>
-        <motion.div
-          variants={imageMe('left')}
-          className={`absolute top-[50%] left-[50%] z-20`}
-        >
-          <div className="letter-image">
-            <div className="animated-mail">
-              <div className="back-fold"></div>
-              <div className="letter">
-                <div className="letter-border"></div>
-                <button className="contact-btn btn btn-secondary text-white mt-2">
-                  Get in touch!
-                </button>
-                <div className="letter-context"></div>
-              </div>
-              <div className="top-fold"></div>
-              <div className="body"></div>
-              <div className="left-fold"></div>
-            </div>
-            <div className="shadow"></div>
-          </div>
-        </motion.div>
         <div className="table w-full h-40  animate-pulse z-0">
-          <div className="monitor bg-neutral center">
-            <p className="text text-secondary">
-              {time + ' | ' + date}-{time + ' | ' + date}-{time + ' | ' + date}-
-              {time + ' | ' + date}
+          <div className=" bg-neutral absolute top-0 left-0 right-0 bottom-0 m-auto w-full h-20 flex items-center justify-center overflow-hidden whitespace-nowrap monitor ">
+            <p className="monitorText text-secondary">
+              {time + ' | ' + date + time + ' | ' + date + time + ' | ' + date}
             </p>
           </div>
         </div>
-        <div className="gradient-03 z-10" />
       </motion.div>
+
+      <div className="gradient-03 z-10" />
     </section>
   );
 };
