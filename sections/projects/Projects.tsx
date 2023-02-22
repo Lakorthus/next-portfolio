@@ -53,19 +53,17 @@ const Projects: React.FC<IProjects> = () => {
         className={`innerWidth mx-auto flex flex-col`}
       >
         <div className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5">
+          <div className="gradient-04 -z-10" />
           {exploreprojects.map((project, index) => (
-            <>
-              <div className="gradient-04 -z-10" />
-              <HomeCard
-                key={project.id}
-                id={project.id}
-                imgUrl={project.imgUrl}
-                title={project.title}
-                index={index}
-                active={active}
-                handleClick={setActive}
-              />
-            </>
+            <HomeCard
+              key={project.id}
+              id={project.id}
+              imgUrl={project.imgUrl}
+              title={project.title}
+              index={index}
+              active={active}
+              handleClick={setActive}
+            />
           ))}
         </div>
       </motion.div>
