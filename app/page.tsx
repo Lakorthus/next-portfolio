@@ -1,4 +1,4 @@
-import { About, Contact, Hero, Projects } from '../sections/';
+import { About, Hero, Projects } from '../sections/';
 const Home = () => {
   return (
     <div className="overflow-hidden">
@@ -8,10 +8,10 @@ const Home = () => {
         <div className="gradient-03 z-0" />
         <Projects />
       </div>
-      <div className="relative">
+      {/* <div className="relative">
         <Contact />
         <div className="gradient-04 z-0" />
-      </div>
+      </div> */}
     </div>
   );
 };
