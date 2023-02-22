@@ -1,4 +1,3 @@
-'use client';
 import { About, Contact, Hero, Projects } from '../sections/';
 const Home = () => {
   return (
