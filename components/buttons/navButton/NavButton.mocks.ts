@@ -1,8 +1,8 @@
-import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { FaUserAlt } from 'react-icons/fa';
 import { INavButton } from './NavButton';
 
 const base: INavButton = {
-  faIcon: faUser,
+  faIcon: FaUserAlt,
   path: '/',
   colorIndex: 1,
   placeholder: 'GitHub',
