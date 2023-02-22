@@ -19,7 +19,7 @@ const Path = (props: any) => (
 
 const MenuToggle: React.FC<IMenuToggle> = ({ toggle }) => {
   return (
-    <button className={`menuToggle`} onClick={toggle}>
+    <div className={`menuToggle`} onClick={toggle}>
       <svg width="23" height="23" viewBox="0 0 23 23">
         <Path variants={toggleSvgVariant.one} />
         <Path
@@ -29,7 +29,7 @@ const MenuToggle: React.FC<IMenuToggle> = ({ toggle }) => {
         />
         <Path variants={toggleSvgVariant.three} />
       </svg>
-    </button>
+    </div>
   );
 };
 
