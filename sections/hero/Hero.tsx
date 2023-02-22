@@ -17,10 +17,10 @@ const Hero: React.FC<IHero> = () => {
         className={`innerWidth mx-auto flex flex-col`}
       >
         <div className="flex justify-center items-center flex-col relative z-10">
-          <motion.h1 variants={textVariant(1.1)} className={`heroHeading`}>
-            Juli
+          <motion.div variants={textVariant(1.1)} className={`heroHeading`}>
+            <h1>Juli</h1>
             <div className={`heroOText`} />
-          </motion.h1>
+          </motion.div>
           <motion.div
             variants={textVariant(1.2)}
             className="flex flex-row justify-center items-center"
