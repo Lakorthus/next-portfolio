@@ -182,7 +182,7 @@
   font-size: 40px;
   position: relative;
   display: inline-block;
-  animation: move 50s infinite linear;
+  animation: move 15s infinite linear;
 }
 
 @keyframes move {
@@ -190,6 +190,6 @@
     left: 0;
   }
   100% {
-    left: -2800px;
+    left: 100%;
   }
 }

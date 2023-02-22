@@ -1,16 +1,14 @@
 'use client';
 import {
-  faGithub,
-  faLinkedin,
-  faTwitter,
-} from '@fortawesome/free-brands-svg-icons';
-import {
-  faEnvelope,
-  faFileDownload,
-  faHome,
-  faSuitcase,
-  faUser,
-} from '@fortawesome/free-solid-svg-icons';
+  BsEnvelopeFill,
+  BsFillCloudArrowDownFill,
+  BsGithub,
+  BsHouseFill,
+  BsLinkedin,
+  BsTwitter,
+} from 'react-icons/bs';
+import { FaSuitcase, FaUserAlt } from 'react-icons/fa';
+
 import { motion } from 'framer-motion';
 import { navigationVariants } from '../../../utils/motion';
 import NavButton from '../../buttons/navButton/NavButton';
@@ -30,53 +28,53 @@ const Navigation: React.FC<INavigation> = ({ className }) => {
 
         <NavButton
           placeholder={'Home'}
-          faIcon={faHome}
+          faIcon={<BsHouseFill />}
           path={'/'}
           colorIndex={2}
         />
         <NavButton
           placeholder={'About'}
-          faIcon={faUser}
+          faIcon={<FaUserAlt />}
           path={'/about'}
           colorIndex={4}
         />
         <NavButton
           placeholder={'Portfolio'}
-          faIcon={faSuitcase}
+          faIcon={<FaSuitcase />}
           path={'/portfolio'}
           colorIndex={3}
         />
         <NavButton
           placeholder={'Contact'}
-          faIcon={faEnvelope}
+          faIcon={<BsEnvelopeFill />}
           path={'/contact'}
           colorIndex={1}
         />
 
         <NavButton
           placeholder={'Github'}
-          faIcon={faGithub}
+          faIcon={<BsGithub />}
           path={'https://github.com/Lakorthus'}
           colorIndex={6}
           target
         />
         <NavButton
           placeholder={'LinkedIn'}
-          faIcon={faLinkedin}
+          faIcon={<BsLinkedin />}
           path={'https://www.linkedin.com/in/jv-frontend-developer/'}
           colorIndex={7}
           target
         />
         <NavButton
           placeholder={'Twitter'}
-          faIcon={faTwitter}
+          faIcon={<BsTwitter />}
           path={'https://twitter.com/Lakorthus'}
           colorIndex={8}
           target
         />
         <NavButton
           placeholder={'Download CV'}
-          faIcon={faFileDownload}
+          faIcon={<BsFillCloudArrowDownFill />}
           path={'/'}
           colorIndex={5}
         />
