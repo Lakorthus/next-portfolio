@@ -39,20 +39,16 @@ const About: React.FC<IAbout> = () => {
           className={`flex flex-col w-full min-h-[16rem] md:grid grid-cols-3 gap-4 mt-2 md:mt-6 lg:mt-8`}
         >
           <AboutList
-            text={
-              'About 1 Lorem imput Lorem imput.About 1 Lorem imput Lorem imput.'
-            }
+            text={'Took a leap of faith at 26 and moved to the UK.'}
             number={1}
           />
           <AboutList
-            text={
-              'About 2 Lorem imput Lorem imput.About 1 Lorem imput Lorem imput.'
-            }
+            text={'Discovered a true passion for coding at School of Code.'}
             number={2}
           />
           <AboutList
             text={
-              'About 3 Lorem imput Lorem imputAbout 1 Lorem imput Lorem imput..'
+              'Strives to positively impact as many people as possible in life.'
             }
             number={3}
           />

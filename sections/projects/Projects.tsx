@@ -11,27 +11,27 @@ export const exploreprojects = [
   {
     id: 'project-1',
     imgUrl: projectOne,
-    title: 'The Hogwarts',
+    title: 'Project Metarvese',
   },
   {
     id: 'project-2',
     imgUrl: projectOne,
-    title: 'The Upside Down',
+    title: 'Caimito',
   },
   {
     id: 'project-3',
     imgUrl: projectOne,
-    title: 'Kadirojo Permai',
+    title: 'LetChat',
   },
   {
     id: 'project-4',
     imgUrl: projectOne,
-    title: 'Paradise Island',
+    title: 'Bootcamp Buddy',
   },
   {
     id: 'project-5',
     imgUrl: projectOne,
-    title: 'Hawkins Labs',
+    title: 'Sanity Blog',
   },
 ];
 const Projects: React.FC<IProjects> = () => {
