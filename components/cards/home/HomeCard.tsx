@@ -1,12 +1,12 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
 import { fadeIn } from '../../../utils/motion';
 export interface IHomeCard {
   id: string;
-  imgUrl: string;
+  imgUrl: StaticImageData;
   title: string;
 
   index: number;

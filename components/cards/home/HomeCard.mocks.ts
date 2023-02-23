@@ -1,8 +1,9 @@
+import cartoon1 from '../../../public/cartoon1.jpg';
 import { IHomeCard } from './HomeCard';
 
 const base: IHomeCard = {
   id: '1',
-  imgUrl: 'placeimg.com/640/480/any',
+  imgUrl: cartoon1,
   title: 'Title',
   index: 1,
   active: 'active',

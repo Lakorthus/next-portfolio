@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { HomeCard } from '../../components';
-import projectOne from '../../public/frame.svg';
+import projectOne from '../../public/frame.png';
 import { staggerContainer, textVariant2 } from '../../utils/motion';
 
 export interface IProjects {}
