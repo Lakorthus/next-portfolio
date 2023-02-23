@@ -4,14 +4,11 @@ export default function Head() {
       <title>Portfolio</title>
       <link rel="icon" href="./avatar.png" />
       <meta
-        name="Description"
+        name="description"
         content="Personal Portfolio to make display of my projects and blog"
       />
-      <meta
-        name="Portfolio frontend developer Next13 react storybook typescript"
-        content="CSS, Typescript"
-      />
-      <meta name="Lakorthus" content="Julio Velezmoro" />
+      <meta name="technologies" content="Css, Typescript, Nextjs,  " />
+      <meta name="author" content="Julio Velezmoro" />
     </>
   );
 }
