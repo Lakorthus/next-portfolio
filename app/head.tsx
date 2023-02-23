@@ -4,7 +4,7 @@ export default function Head() {
       <title>Portfolio</title>
       <link rel="icon" href="./avatar.png" />
       <meta
-        name="Portfolio build with Next13 beta"
+        name="Description"
         content="Personal Portfolio to make display of my projects and blog"
       />
       <meta

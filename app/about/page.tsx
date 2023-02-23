@@ -16,7 +16,10 @@ const About = () => {
   const [showMenu, setShowMenu] = useState(true);
 
   return (
-    <div className={style.about}>
+    <div
+      className={`${style.about} relative h-screen flex items-center justify-between yPaddings pl-16 md:pl-32  lg:pl-72`}
+    >
+      <div className="gradient-02 z-0" />
       <div className={style.skill_menu} onClick={() => setShowMenu(!showMenu)}>
         {showMenu ? <AiOutlineClose /> : <HiOutlineMenu />}
       </div>
