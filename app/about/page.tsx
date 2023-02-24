@@ -5,7 +5,6 @@ import { AiOutlineClose } from 'react-icons/ai';
 import { BsFolderFill, BsMarkdownFill } from 'react-icons/bs';
 import { FiChevronDown, FiChevronRight } from 'react-icons/fi';
 import { HiOutlineMenu } from 'react-icons/hi';
-import style from '../../styles/About.module.css';
 
 const About = () => {
   const [showReact, setShowReact] = useState(true);
@@ -17,16 +16,19 @@ const About = () => {
 
   return (
     <div
-      className={`${style.about} relative h-screen flex items-center justify-between yPaddings pl-16 md:pl-32  lg:pl-72`}
+      className={`relative h-screen flex items-center justify-between yPaddings pl-16 md:pl-32  lg:pl-72`}
     >
       <div className="gradient-02 z-0" />
-      <div className={style.skill_menu} onClick={() => setShowMenu(!showMenu)}>
+      <div
+        className={`absolute right-4 top-0 text-3xl cursor-pointer lg:hidden lg:opacity-0 z-50 flex opacity-100`}
+        onClick={() => setShowMenu(!showMenu)}
+      >
         {showMenu ? <AiOutlineClose /> : <HiOutlineMenu />}
       </div>
 
-      <div className={style.left}>
+      <div className={`flex ml-0.5 overflow-hidden lg:h-128 h-96 relative`}>
         <motion.div
-          className={style.left_number}
+          className={`flex flex-col mt-24 lg:text-lg text-sm`}
           initial="hidden"
           animate="visible"
           variants={{
@@ -45,24 +47,24 @@ const About = () => {
             },
           }}
         >
-          <span className={style.text_fade_01}>20</span>
-          <span className={style.text_fade_01}>21</span>
-          <span className={style.text_fade_01}>22</span>
-          <span className={style.text_fade_01}>23</span>
-          <span className={style.text_fade_01}>24</span>
-          <span className={style.text_fade_01}>25</span>
-          <span className={style.text_fade_01}>26</span>
-          <span className={style.text_fade_01}>27</span>
-          <span className={style.text_fade_01}>28</span>
-          <span className={style.text_fade_01}>29</span>
-          <span className={style.text_fade_01}>30</span>
-          <span className={style.text_fade_01}>31</span>
-          <span className={style.text_fade_01}>32</span>
-          <span className={style.text_fade_01}>33</span>
-          <span className={style.text_fade_01}>34</span>
-          <span className={style.text_fade_01}>35</span>
-          <span className={style.text_fade_02}>36</span>
-          <span className={style.text_fade_03}>37</span>
+          <span className={`opacity-10`}>20</span>
+          <span className={`opacity-10`}>21</span>
+          <span className={`opacity-10`}>22</span>
+          <span className={`opacity-10`}>23</span>
+          <span className={`opacity-10`}>24</span>
+          <span className={`opacity-10`}>25</span>
+          <span className={`opacity-10`}>26</span>
+          <span className={`opacity-10`}>27</span>
+          <span className={`opacity-10`}>28</span>
+          <span className={`opacity-10`}>29</span>
+          <span className={`opacity-10`}>30</span>
+          <span className={`opacity-10`}>31</span>
+          <span className={`opacity-10`}>32</span>
+          <span className={`opacity-10`}>33</span>
+          <span className={`opacity-10`}>34</span>
+          <span className={`opacity-10`}>35</span>
+          <span className={`opacity-30`}>36</span>
+          <span className={`opacity-60`}>37</span>
           <span>38</span>
           <span>39</span>
           <span>40</span>
@@ -78,14 +80,18 @@ const About = () => {
           <span>50</span>
           <span>51</span>
           <span>52</span>
-          <span className={style.text_fade_03}>53</span>
-          <span className={style.text_fade_02}>54</span>
-          <span className={style.text_fade_01}>55</span>
+          <span className={`opacity-60`}>53</span>
+          <span className={`opacity-30`}>54</span>
+          <span className={`opacity-10`}>55</span>
         </motion.div>
-        <div className={style.left_line}></div>
-        <div className={style.left_line2}></div>
+        <div
+          className={`w-px h-96 ml-2 lg:ml-4 bg-gradient-to-b from-transparent via-white to-transparent`}
+        ></div>
+        <div
+          className={`w-px h-44 m-auto ml-2 lg:ml-4 bg-gray-300 bg-opacity-20`}
+        ></div>
         <motion.div
-          className={style.left_about}
+          className={`flex flex-col justify-center ml-3.5 text-gray-500 text-lg`}
           initial="hidden"
           animate="visible"
           variants={{
@@ -105,7 +111,7 @@ const About = () => {
           }}
         >
           {/* eslint-disable-next-line react/jsx-no-comment-textnodes */}
-          <span className={style.ml_2}> /** </span>
+          <span className={`-ml-3.5`}> /** </span>
           <span style={{ fontWeight: 'bold' }}>* About me</span>
           <span>* Creative and self-starting Front-End Developer</span>
           <span>* with 2 years experience and maintaining</span>
@@ -113,12 +119,12 @@ const About = () => {
           <span>* Proficient in HTML, CSS, JavaScript</span>
           <span>* and React plus modern libraries and frameworks.</span>
 
-          <span className={style.ml_2}>*/</span>
+          <span className={`-ml-3.5`}>*/</span>
         </motion.div>
       </div>
       {showMenu && (
         <motion.div
-          className={style.right}
+          className={`bg-[#010409] h-screen mt-28 p-4 lg:w-96 w-80 hidden absolute right-0 overflow-auto`}
           initial="hidden"
           animate="visible"
           variants={{
@@ -136,14 +142,16 @@ const About = () => {
             },
           }}
         >
-          <div className={style.right_container}>
-            <h3>Explorer</h3>
-            <div className={style.right_interest}>
+          <div>
+            <h3 className="font-bold ml-3.5 mb-2.5 lg:text-2xl text-xl">
+              Explorer
+            </h3>
+            <div>
               <span style={{ marginLeft: '5px' }}>MY INTERESTS</span>
-              <div className={style.skill}>
+              <div className={`mt-1.5 flex flex-col lg:text-lg text-base`}>
                 <div
                   onClick={() => setShowReact(!showReact)}
-                  className={style.dropdownSkill}
+                  className={`flex gap-1 cursor-pointer w-fit`}
                 >
                   <span>
                     {showReact ? <FiChevronDown /> : <FiChevronRight />}
@@ -156,7 +164,7 @@ const About = () => {
                 <AnimatePresence>
                   {showReact && (
                     <motion.div
-                      className={style.showSkill}
+                      className={`ml-7 text-[#81A1C1]`}
                       initial="hidden"
                       animate="visible"
                       exit="go"
@@ -204,10 +212,10 @@ const About = () => {
                   )}
                 </AnimatePresence>
               </div>
-              <div className={style.skill}>
+              <div className={`mt-1.5 flex flex-col lg:text-lg text-base`}>
                 <div
                   onClick={() => setShowNext(!showNext)}
-                  className={style.dropdownSkill}
+                  className={`flex gap-1 cursor-pointer w-fit`}
                 >
                   <span>
                     {showNext ? <FiChevronDown /> : <FiChevronRight />}
@@ -220,7 +228,7 @@ const About = () => {
                 <AnimatePresence>
                   {showNext && (
                     <motion.div
-                      className={style.showSkill}
+                      className={`ml-7 text-[#81A1C1]`}
                       initial="hidden"
                       animate="visible"
                       exit="go"
@@ -265,10 +273,10 @@ const About = () => {
                   )}
                 </AnimatePresence>
               </div>
-              <div className={style.skill}>
+              <div className={`mt-1.5 flex flex-col lg:text-lg text-base`}>
                 <div
                   onClick={() => setShowLibrary(!showLibrary)}
-                  className={style.dropdownSkill}
+                  className={`flex gap-1 cursor-pointer w-fit`}
                 >
                   <span>
                     {showLibrary ? <FiChevronDown /> : <FiChevronRight />}
@@ -281,7 +289,7 @@ const About = () => {
                 <AnimatePresence>
                   {showLibrary && (
                     <motion.div
-                      className={style.showSkill}
+                      className={`ml-7 text-[#81A1C1]`}
                       initial="hidden"
                       animate="visible"
                       exit="go"
@@ -326,10 +334,10 @@ const About = () => {
                   )}
                 </AnimatePresence>
               </div>
-              <div className={style.skill}>
+              <div className={`mt-1.5 flex flex-col lg:text-lg text-base`}>
                 <div
                   onClick={() => setShowHtml(!showHtml)}
-                  className={style.dropdownSkill}
+                  className={`flex gap-1 cursor-pointer w-fit`}
                 >
                   <span>
                     {showHtml ? <FiChevronDown /> : <FiChevronRight />}
@@ -342,7 +350,7 @@ const About = () => {
                 <AnimatePresence>
                   {showHtml && (
                     <motion.div
-                      className={style.showSkill}
+                      className={`ml-7 text-[#81A1C1]`}
                       initial="hidden"
                       animate="visible"
                       exit="go"
@@ -381,10 +389,10 @@ const About = () => {
                   )}
                 </AnimatePresence>
               </div>
-              <div className={style.skill}>
+              <div className={`mt-1.5 flex flex-col lg:text-lg text-base`}>
                 <div
                   onClick={() => setShowFree(!showFree)}
-                  className={style.dropdownSkill}
+                  className={`flex gap-1 cursor-pointer w-fit`}
                 >
                   <span>
                     {showFree ? <FiChevronDown /> : <FiChevronRight />}
@@ -397,7 +405,7 @@ const About = () => {
                 <AnimatePresence>
                   {showFree && (
                     <motion.div
-                      className={style.showSkill}
+                      className={`ml-7 text-[#81A1C1]`}
                       initial="hidden"
                       animate="visible"
                       exit="go"
