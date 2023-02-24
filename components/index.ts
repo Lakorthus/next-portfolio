@@ -1,3 +1,4 @@
+import AboutFile from './aboutFile/AboutFile';
 import AboutList from './aboutList/AboutList';
 import MenuToggle from './buttons/menuToggle/MenuToggle';
 import NavButton from './buttons/navButton/NavButton';
@@ -16,4 +17,5 @@ export {
   Carousel,
   PrimaryLayout,
   Header,
+  AboutFile,
 };

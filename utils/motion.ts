@@ -166,3 +166,72 @@ export const imageMe = (direction: any) => ({
     },
   },
 });
+
+export const spanAbout = {
+  hidden: {
+    y: '100px',
+    opacity: 0,
+  },
+  visible: {
+    y: '-370px',
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      delay: 0.2,
+      duration: 2,
+    },
+  },
+};
+export const span2About = {
+  hidden: {
+    y: '-1000px',
+    opacity: 0,
+  },
+  visible: {
+    y: '0px',
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      delay: 0.2,
+      duration: 3,
+    },
+  },
+};
+export const explorerAbout = {
+  hidden: {
+    x: '100px',
+    opacity: 0,
+  },
+  visible: {
+    x: '0',
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      delay: 2,
+    },
+  },
+};
+export const folderAbout = {
+  hidden: {
+    y: '-20px',
+    opacity: 0,
+  },
+  visible: {
+    y: '0',
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      delay: 0.2,
+      duration: 0.5,
+    },
+  },
+  go: {
+    y: '-20px',
+    opacity: 0,
+    transition: {
+      type: 'spring',
+      delay: 0.2,
+      duration: 0.3,
+    },
+  },
+};
