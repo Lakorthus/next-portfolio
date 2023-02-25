@@ -182,7 +182,7 @@ export const spanAbout = {
     },
   },
 };
-export const span2About = {
+export const commentAbout = {
   hidden: {
     y: '-1000px',
     opacity: 0,

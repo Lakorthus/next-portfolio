@@ -1,5 +1,6 @@
-import AboutFile from './aboutFile/AboutFile';
-import AboutList from './aboutList/AboutList';
+import AboutFile from './about/aboutFile/AboutFile';
+import AboutList from './about/aboutList/AboutList';
+import AboutSpan from './about/aboutSpan/AboutSpan';
 import MenuToggle from './buttons/menuToggle/MenuToggle';
 import NavButton from './buttons/navButton/NavButton';
 import HomeCard from './cards/home/HomeCard';
@@ -18,4 +19,5 @@ export {
   PrimaryLayout,
   Header,
   AboutFile,
+  AboutSpan,
 };

@@ -1,7 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
-import { fadeIn } from '../../utils/motion';
+import { fadeIn } from '../../../utils/motion';
 
 export interface IAboutList {
   text: string;
