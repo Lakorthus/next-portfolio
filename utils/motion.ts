@@ -173,7 +173,7 @@ export const spanAbout = {
     opacity: 0,
   },
   visible: {
-    y: '-370px',
+    y: '0',
     opacity: 1,
     transition: {
       type: 'spring',
