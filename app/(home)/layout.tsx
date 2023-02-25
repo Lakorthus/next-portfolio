@@ -1,5 +1,5 @@
-import { PrimaryLayout } from '../components';
-import '../styles/globals.css';
+import { PrimaryLayout } from '../../components';
+import '../../styles/globals.css';
 
 function RootLayout({
   // Layouts must accept a children prop.

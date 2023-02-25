@@ -1,5 +1,5 @@
 import { Suspense } from 'react';
-import { About, Contact, Hero, Projects } from '../sections/';
+import { About, Contact, Hero, Projects } from '../../sections';
 
 function Loading() {
   return <h2>🌀 Loading...</h2>;
