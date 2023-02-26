@@ -28,7 +28,7 @@ const AboutSpan: React.FC<IAboutSpan> = ({ start, end }) => {
         variants={spanAbout}
       >
         {result.map((number, index) => {
-          if (number === 21 || number === 33) {
+          if (number === 27 || number === 33) {
             return (
               <div key={index} className={`flexCenter gap-1`}>
                 <span className="opacity-90">{number}</span>

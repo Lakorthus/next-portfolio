@@ -1,8 +1,8 @@
 'use client';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { AiOutlineClose } from 'react-icons/ai';
-import { HiOutlineMenu } from 'react-icons/hi';
+import { CgMenuGridR } from 'react-icons/cg';
+
 import { AboutFile, AboutSpan } from '../../components';
 import { commentAbout, explorerAbout, folderAbout } from '../../utils/motion';
 
@@ -15,44 +15,48 @@ const About = () => {
   const [showMenu, setShowMenu] = useState(true);
 
   return (
-    <div className={`h-screen flexCenter yPaddings`}>
+    <div className={`h-screen flexCenter yPaddings xPaddings`}>
       <div className="gradient-02 z-0" />
-      <div
-        className={` text-3xl cursor-pointer lg:hidden flex opacity-100`}
-        onClick={() => setShowMenu(!showMenu)}
-      >
-        {showMenu ? <AiOutlineClose /> : <HiOutlineMenu />}
-      </div>
-      <div className="bg-black h-[80%] w-[70%] flexStart justify-between flex-row-reverse overflow-hidden">
-        <div className={`flex flex-[70%] h-full`}>
-          <AboutSpan start={14} end={50} />
-          <motion.div
-            className={`flex flex-col justify-center ml-3.5 text-gray-500 text-lg`}
-            initial="hidden"
-            animate="visible"
-            variants={commentAbout}
-          >
-            <span className={`-ml-3.5`}> / ** </span>
-            <h2 className={`font-bold`}>
-              <span>*</span>About me
-            </h2>
-            <p>
-              <span>*</span> Creative and self-starting Front-End Developer
-              <br />
-              <span>*</span> with 2 years experience and maintaining
-              <br />
-              <span>*</span> responsive websites.
-              <br />
-              <span>*</span> Proficient in HTML, CSS, JavaScript
-              <br />
-              <span>*</span> and React plus modern libraries and frameworks.
-            </p>
-            <span className={`-ml-3.5`}>* /</span>
-          </motion.div>
+
+      <div className="bg-black w-full h-[80%] flex justify-between relative overflow-hidden">
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={commentAbout}
+          className={`flex justify-end w-full max-w-[800px] h-full`}
+        >
+          <div className={`flexCenter`}>
+            <AboutSpan start={14} end={50} />
+            <div className={`flex flex-col text-gray-500 text-lg`}>
+              <span className={`-ml-3.5`}> / ** </span>
+              <h2 className={`font-bold`}>
+                <span>*</span>About me
+              </h2>
+              <p>
+                <span>*</span> Creative and self-starting Front-End Developer
+                <br />
+                <span>*</span> with 2 years experience and maintaining
+                <br />
+                <span>*</span> responsive websites.
+                <br />
+                <span>*</span> Proficient in HTML, CSS, JavaScript
+                <br />
+                <span>*</span> and React plus modern libraries and frameworks.
+              </p>
+              <span className={`-ml-3.5`}>* /</span>
+            </div>
+          </div>
+        </motion.div>
+
+        <div
+          className={` text-3xl cursor-pointer flex opacity-100 z-30`}
+          onClick={() => setShowMenu(!showMenu)}
+        >
+          {showMenu ? <CgMenuGridR /> : <CgMenuGridR />}
         </div>
         {showMenu && (
           <motion.div
-            className={`bg-[#010409] p-4 hidden overflow-auto h-full flex-[30%] carousel carousel-vertical`}
+            className={`bg-[#010409] p-4 hidden absolute overflow-auto h-full min-w-[280px] carousel carousel-vertical`}
             initial="hidden"
             animate="visible"
             variants={explorerAbout}

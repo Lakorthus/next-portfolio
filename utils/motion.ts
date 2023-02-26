@@ -206,8 +206,8 @@ export const explorerAbout = {
     x: '0',
     opacity: 1,
     transition: {
-      type: 'spring',
-      delay: 2,
+      type: 'tween',
+      ease: 'easeIn',
     },
   },
 };

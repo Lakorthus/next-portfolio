@@ -48,6 +48,7 @@ const Carousel: React.FC<ICarousel> = () => {
               alt="cartoon image"
               className="w-full lg:h-[480px] md:h-[400px] h-[350px] object-cover z-10 "
               priority
+              draggable={false}
             />
           </div>
         ))}
