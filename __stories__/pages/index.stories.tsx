@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import RootLayout from '../../app/page';
+import RootLayout from '../../app/(home)/page';
 
 export default {
   title: 'app/Home',

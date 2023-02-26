@@ -5,6 +5,11 @@ module.exports = {
     appDir: true,
   },
   images: {
-    domains: ['placeimg.com', 'images.unsplash.com', 'i.pravatar.cc'],
+    domains: [
+      'placeimg.com',
+      'images.unsplash.com',
+      'i.pravatar.cc',
+      'cdn.sanity.io',
+    ],
   },
 };
