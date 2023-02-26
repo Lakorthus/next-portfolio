@@ -46,7 +46,7 @@ const Carousel: React.FC<ICarousel> = () => {
             <Image
               src={image}
               alt="cartoon image"
-              className="w-full lg:h-[480px] md:h-[400px] h-[350px] object-cover  z-10 "
+              className="w-full lg:h-[480px] md:h-[400px] h-[350px] object-cover z-10 "
               priority
             />
           </div>
