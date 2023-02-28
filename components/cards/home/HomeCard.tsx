@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image, { StaticImageData } from 'next/image';
+import Link from 'next/link';
 
 import { fadeIn } from '../../../utils/motion';
 export interface IHomeCard {
@@ -46,6 +47,9 @@ const HomeCard: React.FC<IHomeCard> = ({
           <h2 className="mt-[14px] font-semibold sm:text-[22px] text-[18px] text-white">
             {title}
           </h2>
+          <Link href={'/portfolio'} className="mt-2 text-[14px] text-white">
+            Click to see more about this project
+          </Link>
         </div>
       )}
     </motion.div>

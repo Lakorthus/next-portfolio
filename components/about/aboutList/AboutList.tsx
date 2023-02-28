@@ -17,8 +17,8 @@ const AboutList: React.FC<IAboutList> = ({ text, number }) => {
     deleteSpeed: 100,
   });
   return (
-    <div className="relative flexCenter h-28 pl-2">
-      <div className={`flexCenter h-16 w-1/4 rounded-[24px] bg-[#323F5D]`}>
+    <div className="relative flexCenter min-h-28 pl-2">
+      <div className={`flexCenter min-h-16 w-1/4 rounded-[24px] bg-[#323F5D]`}>
         <motion.p
           variants={fadeIn('up', 'tween', 0.2, 1)}
           className="font-bold text-[20px]  text-white"

@@ -1,9 +1,13 @@
 'use client';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import { AboutList } from '../../components/';
 import avatar from '../../public/avatar.png';
+import speach from '../../public/speach.png';
+
 import { imageMe, staggerContainer, textVariant2 } from '../../utils/motion';
+
 export interface IAbout {}
 
 const About: React.FC<IAbout> = () => {
@@ -27,14 +31,25 @@ const About: React.FC<IAbout> = () => {
         viewport={{ once: false, amount: 0.25 }}
         className={`innerWidth mx-auto`}
       >
-        <motion.div variants={imageMe('left')} className={`flex-1 flexCenter`}>
-          <Image
-            src={avatar}
-            alt="get-started"
-            className="w-auto object-contain py-5"
-            priority
-          />
-        </motion.div>
+        <Link href="/about">
+          <motion.div
+            variants={imageMe('left')}
+            className={`flex-1 h-96 flexCenter group`}
+          >
+            <Image
+              src={avatar}
+              alt="get-started"
+              className="w-auto object-contain py-5 group-hover:hidden z-40"
+              priority
+            />
+            <Image
+              src={speach}
+              alt="get-started"
+              className="w-auto object-contain group-hover:block hidden"
+              priority
+            />
+          </motion.div>
+        </Link>
         <div
           className={`flex flex-col w-full min-h-[16rem] md:grid grid-cols-3 gap-4 mt-2 md:mt-6 lg:mt-8`}
         >
