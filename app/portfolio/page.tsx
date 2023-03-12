@@ -3,7 +3,7 @@
 import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
 
-const Contact = () => {
+const Portfolio = () => {
   const form: any = useRef();
   const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
   const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;
@@ -106,4 +106,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Portfolio;
