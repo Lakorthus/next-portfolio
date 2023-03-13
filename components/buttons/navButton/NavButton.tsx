@@ -9,7 +9,7 @@ export interface INavButton {
   path: string | '/';
   placeholder?: string;
   target?: boolean;
-  colorIndex: number;
+  download?: boolean;
 }
 
 const NavButton: React.FC<INavButton> = ({
@@ -17,6 +17,7 @@ const NavButton: React.FC<INavButton> = ({
   path,
   placeholder,
   target,
+  download,
 }) => {
   return (
     <motion.div
@@ -28,6 +29,7 @@ const NavButton: React.FC<INavButton> = ({
       <Link
         className="w-full flex items-center justify-start"
         href={path}
+        {...(download ? { locale: false } : {})}
         {...(target ? { target: '_blank', rel: 'noreferrer' } : {})}
       >
         <div

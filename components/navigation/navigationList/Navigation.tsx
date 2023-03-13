@@ -26,57 +26,47 @@ const Navigation: React.FC<INavigation> = ({ className }) => {
       >
         <div className="absolute w-full inset-0 gradient-01" />
 
-        <NavButton
-          placeholder={'Home'}
-          faIcon={<BsHouseFill />}
-          path={'/'}
-          colorIndex={2}
-        />
+        <NavButton placeholder={'Home'} faIcon={<BsHouseFill />} path={'/'} />
         <NavButton
           placeholder={'About'}
           faIcon={<FaUserAlt />}
           path={'/about'}
-          colorIndex={4}
         />
         <NavButton
           placeholder={'Portfolio'}
           faIcon={<FaSuitcase />}
           path={'/portfolio'}
-          colorIndex={3}
         />
         <NavButton
           placeholder={'Contact'}
           faIcon={<BsEnvelopeFill />}
           path={'/contact'}
-          colorIndex={1}
         />
 
         <NavButton
           placeholder={'Github'}
           faIcon={<BsGithub />}
           path={'https://github.com/Lakorthus'}
-          colorIndex={6}
           target
         />
         <NavButton
           placeholder={'LinkedIn'}
           faIcon={<BsLinkedin />}
           path={'https://www.linkedin.com/in/jv-frontend-developer/'}
-          colorIndex={7}
           target
         />
         <NavButton
           placeholder={'Twitter'}
           faIcon={<BsTwitter />}
           path={'https://twitter.com/Lakorthus'}
-          colorIndex={8}
           target
         />
         <NavButton
           placeholder={'Download CV'}
           faIcon={<BsFillCloudArrowDownFill />}
-          path={'/'}
-          colorIndex={5}
+          path={'/JulioCV.pdf'}
+          download
+          target
         />
       </motion.div>
     </>
