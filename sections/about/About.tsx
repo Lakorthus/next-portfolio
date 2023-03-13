@@ -40,12 +40,16 @@ const About: React.FC<IAbout> = () => {
               src={avatar}
               alt="get-started"
               className="w-auto object-contain py-5 group-hover:hidden z-40"
+              width={500}
+              height={500}
               priority
             />
             <Image
               src={speach}
               alt="get-started"
               className="w-auto object-contain group-hover:block hidden"
+              width={500}
+              height={500}
               priority
             />
           </motion.div>

@@ -34,7 +34,7 @@ const Contact: React.FC<IContact> = () => {
         >
           <Image
             src="/map.png"
-            alt="map"
+            alt="contact map"
             width={640}
             height={550}
             className="w-full h-auto object-cover"

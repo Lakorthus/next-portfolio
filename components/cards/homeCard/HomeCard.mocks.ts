@@ -1,9 +1,9 @@
-import cartoon1 from '../../../public/cartoon1.jpg';
+import Frame from '../../../public/frame.png';
 import { IHomeCard } from './HomeCard';
 
 const base: IHomeCard = {
   id: '1',
-  imgUrl: cartoon1,
+  imgUrl: Frame,
   title: 'Title',
   index: 1,
   active: 'active',

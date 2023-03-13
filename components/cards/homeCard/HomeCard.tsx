@@ -36,6 +36,8 @@ const HomeCard: React.FC<IHomeCard> = ({
         src={imgUrl}
         alt="image-project"
         className="absolute w-full h-full object-contain rounded-[24px]"
+        width={500}
+        height={500}
         priority
       />
       {active !== id ? (
