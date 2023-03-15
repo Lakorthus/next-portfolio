@@ -41,15 +41,15 @@ const HomeCard: React.FC<IHomeCard> = ({
         priority
       />
       {active !== id ? (
-        <h3 className="font-semibold p-2 sm:text-[26px] text-[18px] text-white absolute z-0 lg:bottom-20 lg:rotate-[-90deg] lg:origin-[0,0]">
+        <h3 className="font-semibold p-2 sm:text-[26px] text-[18px] absolute z-0 lg:bottom-20 lg:rotate-[-90deg] lg:origin-[0,0]">
           {title}
         </h3>
       ) : (
-        <div className="absolute bottom-0 p-8 flexCenter w-full flex-col bg-[rgba(0,0,0,0.5)] rounded-b-[24px]">
-          <h2 className="mt-[14px] font-semibold sm:text-[22px] text-[18px] text-white">
+        <div className="absolute bottom-0 p-8 flexCenter w-full flex-col bg-base-100 rounded-b-[24px]">
+          <h2 className="mt-[14px] font-semibold sm:text-[22px] text-[18px]">
             {title}
           </h2>
-          <Link href={'/portfolio'} className="mt-2 text-[14px] text-white">
+          <Link href={'/portfolio'} className="mt-2 text-[14px]">
             Click to see more about this project
           </Link>
         </div>

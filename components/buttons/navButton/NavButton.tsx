@@ -40,7 +40,7 @@ const NavButton: React.FC<INavButton> = ({
         <div
           className={`placeHolder glass w-[8rem] flex items-center justify-center border-2 border-solid`}
         >
-          <h2 className="text-white">{placeholder}</h2>
+          <h2>{placeholder}</h2>
         </div>
       </Link>
     </motion.div>
