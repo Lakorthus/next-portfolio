@@ -9,6 +9,7 @@ import ProjectCard from './cards/projectCard/ProjectCard';
 import Carousel from './carousel/Carousel';
 import PrimaryLayout from './layouts/primary/PrimaryLayout';
 import Header from './navigation/header/Header';
+import TabProjects from './navigation/tabProjects/TabProjects';
 
 export {
   AboutList,
@@ -22,4 +23,5 @@ export {
   AboutFile,
   AboutSpan,
   ProjectCard,
+  TabProjects,
 };
