@@ -11,7 +11,7 @@ function RootLayout({
   return (
     <html lang="en">
       <body>
-        <PrimaryLayout>{children}</PrimaryLayout>
+        <PrimaryLayout className={'flexCenter top-0'}>{children}</PrimaryLayout>
       </body>
     </html>
   );
