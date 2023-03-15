@@ -8,7 +8,7 @@ module.exports = {
     './stories/**/*.{ts,tsx}',
   ],
   daisyui: {
-    themes: ['dracula'],
+    themes: ['synthwave'],
   },
   theme: {
     // Ensure these match with .storybook/preview.js

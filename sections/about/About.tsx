@@ -20,7 +20,7 @@ const About: React.FC<IAbout> = () => {
         variants={textVariant2}
         initial="hidden"
         whileInView="show"
-        className={`my-4 font-bold md:text-[40px] text-[34px] text-white md:my-8 tracking-[15px]`}
+        className={`my-4 font-bold md:text-[40px] text-[34px] md:my-8 tracking-[15px]`}
       >
         About me
       </motion.h2>

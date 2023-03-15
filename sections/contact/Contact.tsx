@@ -16,7 +16,7 @@ const Contact: React.FC<IContact> = () => {
         variants={textVariant2}
         initial="hidden"
         whileInView="show"
-        className={`my-4 font-bold md:text-[40px] text-[34px] text-white md:my-8 tracking-[15px]`}
+        className={`my-4 font-bold md:text-[40px] text-[34px] md:my-8 tracking-[15px]`}
       >
         Contact
       </motion.h2>
@@ -43,7 +43,7 @@ const Contact: React.FC<IContact> = () => {
         </motion.div>
         <div className="table w-full h-40  animate-pulse z-0">
           <div className=" bg-neutral absolute top-0 left-0 right-0 bottom-0 m-auto w-full h-20 flex items-center justify-center overflow-hidden whitespace-nowrap monitor ">
-            <p className="monitorText text-secondary">
+            <p className="monitorText">
               JavaScript, React, Next.js, TypeScript, TailwindCSS, Framer Motion
             </p>
           </div>
