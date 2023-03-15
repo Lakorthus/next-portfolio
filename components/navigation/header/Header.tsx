@@ -23,12 +23,12 @@ const Header: React.FC<IHeader> = ({ ...headerProps }) => {
     <header {...headerProps}>
       <motion.nav
         initial={isLoading ? false : true}
-        animate={isOpen || isLoading ? 'closed' : 'open'}
+        animate={isOpen || isLoading ? 'open' : 'closed'}
       >
         <motion.div className={`sidebarBg `} variants={sidebarVariant} />
 
         <MenuToggle toggle={() => toggleOpen()} />
-        <Navigation className={`${isOpen ? `hidden` : ``}`} />
+        <Navigation className={`${isOpen ? `` : `hidden`}`} />
       </motion.nav>
     </header>
   );
