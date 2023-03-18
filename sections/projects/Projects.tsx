@@ -59,7 +59,7 @@ const Projects: React.FC<IProjects> = () => {
         className={`innerWidth mx-auto flex flex-col`}
       >
         <div className="gradient-04 -z-10" />
-        <div className="mt-[50px] flex lg:flex-row flex-col">
+        <div className="flex lg:flex-row flex-col">
           {exploreprojects.map((project, index) => (
             <HomeCard
               key={project.id}

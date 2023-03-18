@@ -29,13 +29,13 @@ const HomeCard: React.FC<IHomeCard> = ({
       variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
       className={`relative ${
         active === id ? 'lg:flex-[3.5] flex-[10]' : 'lg:flex-[1.5] flex-[5]'
-      } flex items-center justify-center min-w-[170px] h-[700px] transition-[flex] duration-[0.7s] ease-out-flex`}
+      } flex items-center justify-center min-w-[170px] h-[500px] transition-[flex] duration-[0.7s] ease-out-flex`}
       onClick={() => handleClick(id)}
     >
       <Image
         src={imgUrl}
         alt="image-project"
-        className={`absolute w-full object-contain rounded-[24px] cursor-pointer ${
+        className={`absolute mb-[8rem] w-full object-contain rounded-[24px] cursor-pointer ${
           active === id ? 'glass' : ''
         }`}
         width={500}

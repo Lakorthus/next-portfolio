@@ -29,17 +29,17 @@ const About: React.FC<IAbout> = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
-        className={`innerWidth mx-auto`}
+        className={`innerWidth mx-auto flex items-center justify-around flex-col md:flex-row`}
       >
-        <Link href="/about">
+        <Link href="/about" className="flex-1">
           <motion.div
             variants={imageMe('left')}
-            className={`flex-1 h-96 flexCenter group`}
+            className={`w-full h-96 flexCenter group`}
           >
             <Image
               src={avatar}
               alt="get-started"
-              className="w-auto object-contain py-5 group-hover:hidden z-40"
+              className="w-auto h-96 object-contain group-hover:hidden z-40"
               width={500}
               height={500}
               priority
@@ -47,7 +47,7 @@ const About: React.FC<IAbout> = () => {
             <Image
               src={speach}
               alt="get-started"
-              className="w-auto object-contain group-hover:block hidden"
+              className="w-auto h-96 object-contain group-hover:block hidden"
               width={500}
               height={500}
               priority
@@ -55,7 +55,7 @@ const About: React.FC<IAbout> = () => {
           </motion.div>
         </Link>
         <div
-          className={`flex flex-col w-full min-h-[16rem] md:grid grid-cols-3 gap-4 mt-2 md:mt-6 lg:mt-8`}
+          className={`flex-1 min-h-[24rem] grid grid-row-3 gap-6 self-center justify-self-stretch`}
         >
           <AboutList
             text={'Took a leap of faith at 26 and moved to the UK.'}
