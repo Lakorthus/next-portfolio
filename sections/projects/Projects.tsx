@@ -3,6 +3,9 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { HomeCard } from '../../components';
 import projectOne from '../../public/frame.png';
+import letchat from '../../public/letchat.png';
+import vegan from '../../public/vegan.png';
+
 import { staggerContainer, textVariant2 } from '../../utils/motion';
 
 export interface IProjects {}
@@ -15,23 +18,23 @@ export const exploreprojects = [
   },
   {
     id: 'project-2',
-    imgUrl: projectOne,
-    title: 'Caimito',
+    imgUrl: vegan,
+    title: 'La Vegan Loca',
   },
   {
     id: 'project-3',
-    imgUrl: projectOne,
+    imgUrl: letchat,
     title: 'LetChat',
   },
   {
     id: 'project-4',
     imgUrl: projectOne,
-    title: 'Bootcamp Buddy',
+    title: 'Caimito',
   },
   {
     id: 'project-5',
     imgUrl: projectOne,
-    title: 'Sanity Blog',
+    title: 'Codigo Club',
   },
 ];
 const Projects: React.FC<IProjects> = () => {
@@ -53,8 +56,8 @@ const Projects: React.FC<IProjects> = () => {
         viewport={{ once: false, amount: 0.25 }}
         className={`innerWidth mx-auto flex flex-col`}
       >
-        <div className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5">
-          <div className="gradient-04 -z-10" />
+        <div className="gradient-04 -z-10" />
+        <div className="mt-[50px] flex lg:flex-row flex-col">
           {exploreprojects.map((project, index) => (
             <HomeCard
               key={project.id}
