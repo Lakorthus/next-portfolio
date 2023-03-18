@@ -14,6 +14,7 @@ export interface IAboutFile {
   blue?: boolean;
   red?: boolean;
   green?: boolean;
+  handleDoubleClick?: () => void;
 }
 
 const AboutFile: React.FC<IAboutFile> = ({
@@ -26,14 +27,15 @@ const AboutFile: React.FC<IAboutFile> = ({
   blue,
   red,
   green,
+  handleDoubleClick,
 }) => {
   return (
     <div className={`mt-1.5 flex flex-col lg:text-lg text-base`}>
-      <div
-        onClick={() => setState(!state)}
-        className={`flex flex-col gap-1 cursor-pointer w-fit`}
-      >
-        <span className="flex gap-1 cursor-pointer w-fit ">
+      <div className={`flex flex-col gap-1 cursor-pointer w-fit`}>
+        <div
+          onClick={() => setState(!state)}
+          className="flex gap-1 cursor-pointer w-fit "
+        >
           {state ? <FiChevronDown /> : <FiChevronRight />}
 
           <BsFolderFill
@@ -54,7 +56,7 @@ const AboutFile: React.FC<IAboutFile> = ({
           />
 
           <span> {title}</span>
-        </span>
+        </div>
         {state && (
           <AnimatePresence>
             {listItems?.map((item, index) => (
@@ -65,6 +67,7 @@ const AboutFile: React.FC<IAboutFile> = ({
                 exit="go"
                 variants={variants}
                 key={index}
+                onDoubleClick={handleDoubleClick}
               >
                 <BsMarkdownFill /> {item}
               </motion.div>

@@ -2,8 +2,8 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { CgMenuGridR } from 'react-icons/cg';
-
 import { AboutFile, AboutSpan } from '../../components';
+import aboutData from '../../utils/about';
 import { commentAbout, explorerAbout, folderAbout } from '../../utils/motion';
 
 const About = () => {
@@ -14,6 +14,9 @@ const About = () => {
   const [showFree, setShowFree] = useState(false);
   const [showMenu, setShowMenu] = useState(true);
 
+  const doubleClick = () => {
+    console.log('double click');
+  };
   return (
     <div className={`h-screen flexCenter yPaddings xPaddings`}>
       <div className="gradient-02 z-0" />
@@ -67,73 +70,45 @@ const About = () => {
               </h3>
               <div>
                 <span style={{ marginLeft: '5px' }}>MY INTERESTS</span>
-
-                <AboutFile
-                  title="React"
-                  listItems={[
-                    'reusable components.md',
-                    'routing.md',
-                    'fetching api.md',
-                    'context api.md',
-                    'redux.md',
-                  ]}
-                  setState={setShowReact}
-                  state={showReact}
-                  variants={folderAbout}
-                  yellow
-                />
-                <AboutFile
-                  title="Next"
-                  listItems={[
-                    'reusable components.md',
-                    'routing.md',
-                    'fetching api.md',
-                    'SSR.md',
-                  ]}
-                  setState={setShowNext}
-                  state={showNext}
-                  variants={folderAbout}
-                  blue
-                />
-                <AboutFile
-                  title="Library"
-                  listItems={[
-                    'material ui.md',
-                    'bootstrap.md',
-                    'tailwind Css.md',
-                    'framer motion.md',
-                  ]}
-                  setState={setShowLibrary}
-                  state={showLibrary}
-                  variants={folderAbout}
-                  red
-                />
-                <AboutFile
-                  title="Html & CSS"
-                  listItems={[
-                    'responsive website.md',
-                    'grid flexbox.md',
-                    'Sass sCss.md',
-                    'animation.md',
-                  ]}
-                  setState={setShowHtml}
-                  state={showHtml}
-                  variants={folderAbout}
-                  green
-                />
-                <AboutFile
-                  title="Free Time"
-                  listItems={[
-                    'read science fiction.md',
-                    'play video games.md',
-                    'hang out with friends.md',
-                    'learn new things.md',
-                    'building side project.md',
-                  ]}
-                  setState={setShowFree}
-                  state={showFree}
-                  variants={folderAbout}
-                />
+                {aboutData.map((item, index) => (
+                  <AboutFile
+                    key={index}
+                    title={item.title}
+                    listItems={item.listItems}
+                    state={
+                      item.title === 'React'
+                        ? showReact
+                        : item.title === 'Next.js'
+                        ? showNext
+                        : item.title === 'HTML'
+                        ? showHtml
+                        : item.title === 'Library'
+                        ? showLibrary
+                        : item.title === 'Free'
+                        ? showFree
+                        : false
+                    }
+                    setState={
+                      item.title === 'React'
+                        ? setShowReact
+                        : item.title === 'Next.js'
+                        ? setShowNext
+                        : item.title === 'HTML'
+                        ? setShowHtml
+                        : item.title === 'Library'
+                        ? setShowLibrary
+                        : item.title === 'Free'
+                        ? setShowFree
+                        : () => {}
+                    }
+                    variants={folderAbout}
+                    yellow={item.yellow}
+                    blue={item.blue}
+                    red={item.red}
+                    green={item.green}
+                    handleDoubleClick={doubleClick}
+                  />
+                ))}
               </div>
             </div>
           </motion.div>
