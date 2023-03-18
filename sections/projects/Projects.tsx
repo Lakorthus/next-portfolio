@@ -2,8 +2,10 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { HomeCard } from '../../components';
+import caimito from '../../public/caimito.png';
 import projectOne from '../../public/frame.png';
 import letchat from '../../public/letchat.png';
+import portfolio from '../../public/portfolio.png';
 import vegan from '../../public/vegan.png';
 
 import { staggerContainer, textVariant2 } from '../../utils/motion';
@@ -28,13 +30,13 @@ export const exploreprojects = [
   },
   {
     id: 'project-4',
-    imgUrl: projectOne,
+    imgUrl: caimito,
     title: 'Caimito',
   },
   {
     id: 'project-5',
-    imgUrl: projectOne,
-    title: 'Codigo Club',
+    imgUrl: portfolio,
+    title: 'Old Portfolio',
   },
 ];
 const Projects: React.FC<IProjects> = () => {

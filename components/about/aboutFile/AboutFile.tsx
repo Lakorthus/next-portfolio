@@ -1,12 +1,10 @@
 'use client';
 import { AnimatePresence, motion } from 'framer-motion';
-import { Dispatch, SetStateAction } from 'react';
+import { useEffect, useState } from 'react';
 import { BsFolderFill, BsMarkdownFill } from 'react-icons/bs';
 import { FiChevronDown, FiChevronRight } from 'react-icons/fi';
 
 export interface IAboutFile {
-  state: boolean;
-  setState: Dispatch<SetStateAction<boolean>>;
   variants?: any;
   title: string;
   listItems: string[];
@@ -14,12 +12,9 @@ export interface IAboutFile {
   blue?: boolean;
   red?: boolean;
   green?: boolean;
-  handleDoubleClick?: () => void;
 }
 
 const AboutFile: React.FC<IAboutFile> = ({
-  state,
-  setState,
   variants,
   title,
   listItems,
@@ -27,16 +22,25 @@ const AboutFile: React.FC<IAboutFile> = ({
   blue,
   red,
   green,
-  handleDoubleClick,
 }) => {
+  const [show, setShow] = useState(false);
+
+  const handleDoubleClick = (file: string) => {
+    console.log(file);
+  };
+
+  useEffect(() => {
+    if (title == 'React') setShow(true);
+  }, [title]);
+
   return (
     <div className={`mt-1.5 flex flex-col lg:text-lg text-base`}>
       <div className={`flex flex-col gap-1 cursor-pointer w-fit`}>
         <div
-          onClick={() => setState(!state)}
-          className="flex gap-1 cursor-pointer w-fit "
+          onClick={() => setShow(!show)}
+          className="flex items-center gap-1 cursor-pointer w-fit "
         >
-          {state ? <FiChevronDown /> : <FiChevronRight />}
+          {show ? <FiChevronDown /> : <FiChevronRight />}
 
           <BsFolderFill
             className="mx-1"
@@ -57,21 +61,26 @@ const AboutFile: React.FC<IAboutFile> = ({
 
           <span> {title}</span>
         </div>
-        {state && (
+        {show && (
           <AnimatePresence>
-            {listItems?.map((item, index) => (
-              <motion.div
-                className={`flex items-center gap-2 ml-7 list-none text-[#81A1C1]`}
-                initial="hidden"
-                animate="visible"
-                exit="go"
-                variants={variants}
-                key={index}
-                onDoubleClick={handleDoubleClick}
-              >
-                <BsMarkdownFill /> {item}
-              </motion.div>
-            ))}
+            {listItems?.map((item, index) => {
+              let format = item ? item.toLowerCase().replaceAll(' ', '_') : '';
+              return (
+                <motion.div
+                  className={`flex items-center gap-2 ml-7 list-none text-[#81A1C1]`}
+                  initial="hidden"
+                  animate="visible"
+                  exit="go"
+                  variants={variants}
+                  key={index}
+                  onDoubleClick={
+                    format ? () => handleDoubleClick(format) : undefined
+                  }
+                >
+                  <BsMarkdownFill /> {format ? format : '(empty)'}
+                </motion.div>
+              );
+            })}
           </AnimatePresence>
         )}
       </div>

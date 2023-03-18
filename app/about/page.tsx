@@ -7,20 +7,11 @@ import aboutData from '../../utils/about';
 import { commentAbout, explorerAbout, folderAbout } from '../../utils/motion';
 
 const About = () => {
-  const [showReact, setShowReact] = useState(true);
-  const [showNext, setShowNext] = useState(false);
-  const [showHtml, setShowHtml] = useState(false);
-  const [showLibrary, setShowLibrary] = useState(false);
-  const [showFree, setShowFree] = useState(false);
   const [showMenu, setShowMenu] = useState(true);
 
-  const doubleClick = () => {
-    console.log('double click');
-  };
   return (
     <div className={`h-screen flexCenter yPaddings xPaddings`}>
       <div className="gradient-02 z-0" />
-
       <div className="bg-black w-full h-[80%] flex justify-between relative overflow-hidden">
         <motion.div
           initial="hidden"
@@ -75,38 +66,11 @@ const About = () => {
                     key={index}
                     title={item.title}
                     listItems={item.listItems}
-                    state={
-                      item.title === 'React'
-                        ? showReact
-                        : item.title === 'Next.js'
-                        ? showNext
-                        : item.title === 'HTML'
-                        ? showHtml
-                        : item.title === 'Library'
-                        ? showLibrary
-                        : item.title === 'Free'
-                        ? showFree
-                        : false
-                    }
-                    setState={
-                      item.title === 'React'
-                        ? setShowReact
-                        : item.title === 'Next.js'
-                        ? setShowNext
-                        : item.title === 'HTML'
-                        ? setShowHtml
-                        : item.title === 'Library'
-                        ? setShowLibrary
-                        : item.title === 'Free'
-                        ? setShowFree
-                        : () => {}
-                    }
                     variants={folderAbout}
                     yellow={item.yellow}
                     blue={item.blue}
                     red={item.red}
                     green={item.green}
-                    handleDoubleClick={doubleClick}
                   />
                 ))}
               </div>
