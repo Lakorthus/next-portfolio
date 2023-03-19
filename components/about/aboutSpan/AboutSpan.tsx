@@ -20,7 +20,7 @@ const AboutSpan: React.FC<IAboutSpan> = ({ start, end }) => {
   }, [start, end]);
 
   return (
-    <div>
+    <div className="flex items-center">
       <motion.div
         className={`flex flex-col lg:text-lg text-sm`}
         initial="hidden"

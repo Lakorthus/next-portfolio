@@ -66,12 +66,14 @@ const About = () => {
             <div
               className={`bg-[#18181c] absolute flex items-center justify-start w-full h-12 z-20 p-4 overflow-auto carousel carousel-center`}
             >
-              <h5 className="p-4 bg-[#121216] relative min-w-[12.5rem]">
-                {title}{' '}
-                <span className="absolute top-2 right-2 p-1 bg-slate-600 text-xs cursor-pointer">
-                  x
-                </span>
-              </h5>
+              {title && (
+                <h5 className="p-4 bg-[#121216] relative min-w-[12.5rem]">
+                  {title}{' '}
+                  <span className="absolute top-2 right-2 p-1 bg-slate-600 text-xs cursor-pointer">
+                    x
+                  </span>
+                </h5>
+              )}
             </div>
             <div className={`flex items-center justify-start h-full ml-2`}>
               <AboutSpan start={14} end={50} />
