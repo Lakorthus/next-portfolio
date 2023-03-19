@@ -2,7 +2,7 @@ const aboutData = [
   {
     title: 'React',
     listItems: [
-      'reusable components.md',
+      'hooks.md',
       'routing.md',
       'fetching api.md',
       'context api.md',
@@ -45,9 +45,9 @@ const aboutData = [
     listItems: [
       'read science fiction.md',
       'play video games.md',
-      'hang out with friends.md',
+      'out w friends.md',
       'learn new things.md',
-      'building side project.md',
+      'gym and fit.md',
     ],
   },
 ];

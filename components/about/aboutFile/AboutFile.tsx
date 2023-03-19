@@ -12,6 +12,8 @@ export interface IAboutFile {
   blue?: boolean;
   red?: boolean;
   green?: boolean;
+  // eslint-disable-next-line no-unused-vars
+  handleDoubleClick: (format: string) => void;
 }
 
 const AboutFile: React.FC<IAboutFile> = ({
@@ -22,12 +24,9 @@ const AboutFile: React.FC<IAboutFile> = ({
   blue,
   red,
   green,
+  handleDoubleClick,
 }) => {
   const [show, setShow] = useState(false);
-
-  const handleDoubleClick = (file: string) => {
-    console.log(file);
-  };
 
   useEffect(() => {
     if (title == 'React') setShow(true);
@@ -35,15 +34,17 @@ const AboutFile: React.FC<IAboutFile> = ({
 
   return (
     <div className={`mt-1.5 flex flex-col lg:text-lg text-base`}>
-      <div className={`flex flex-col gap-1 cursor-pointer w-fit`}>
+      <div className={`flex flex-col gap-1`}>
         <div
           onClick={() => setShow(!show)}
-          className="flex items-center gap-1 cursor-pointer w-fit "
+          className={`flex items-center gap-1 cursor-pointer ${
+            show ? 'bg-[#2E3440]' : ''
+          }`}
         >
           {show ? <FiChevronDown /> : <FiChevronRight />}
 
           <BsFolderFill
-            className="mx-1"
+            className="mx-1 "
             style={{
               color: `${
                 yellow
@@ -67,15 +68,13 @@ const AboutFile: React.FC<IAboutFile> = ({
               let format = item ? item.toLowerCase().replaceAll(' ', '_') : '';
               return (
                 <motion.div
-                  className={`flex items-center gap-2 ml-7 list-none text-[#81A1C1]`}
+                  className={`flex items-center w-full gap-2 pl-7 list-none text-[#81A1C1] cursor-pointer hover:bg-[#232730]`}
                   initial="hidden"
                   animate="visible"
                   exit="go"
                   variants={variants}
                   key={index}
-                  onDoubleClick={
-                    format ? () => handleDoubleClick(format) : undefined
-                  }
+                  onDoubleClick={() => handleDoubleClick(format)}
                 >
                   <BsMarkdownFill /> {format ? format : '(empty)'}
                 </motion.div>

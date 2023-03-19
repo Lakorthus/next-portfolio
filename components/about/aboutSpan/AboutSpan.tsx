@@ -20,7 +20,7 @@ const AboutSpan: React.FC<IAboutSpan> = ({ start, end }) => {
   }, [start, end]);
 
   return (
-    <>
+    <div>
       <motion.div
         className={`flex flex-col lg:text-lg text-sm`}
         initial="hidden"
@@ -31,7 +31,7 @@ const AboutSpan: React.FC<IAboutSpan> = ({ start, end }) => {
           if (number === 27 || number === 33) {
             return (
               <div key={index} className={`flexCenter gap-1`}>
-                <span className="opacity-90">{number}</span>
+                <span className="opacity-80">{number}</span>
                 <div className="opacity-90 w-2 h-2 rounded-full bg-red-600" />
               </div>
             );
@@ -63,7 +63,7 @@ const AboutSpan: React.FC<IAboutSpan> = ({ start, end }) => {
       <div
         className={`w-px h-44 m-auto ml-2 lg:ml-4 bg-gray-300 bg-opacity-20`}
       ></div>
-    </>
+    </div>
   );
 };
 
