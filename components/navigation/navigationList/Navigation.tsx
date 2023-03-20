@@ -33,7 +33,7 @@ const Navigation: React.FC<INavigation> = ({ className }) => {
           path={'/about'}
         />
         <NavButton
-          placeholder={'Portfolio'}
+          placeholder={'Projects'}
           faIcon={<FaSuitcase />}
           path={'/portfolio'}
         />

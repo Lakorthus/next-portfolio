@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import Pokemon from '../../../projects/pokemon/Pokemon';
+import Weather from '../../../projects/weather/Weather';
 
 export interface ITabProjects {}
 
@@ -56,7 +57,7 @@ const TabProjects: React.FC<ITabProjects> = () => {
           id="link1"
         >
           <Pokemon />
-          <Pokemon />
+          <Weather />
           <Pokemon />
         </div>
         <div
