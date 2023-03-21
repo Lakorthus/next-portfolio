@@ -2,43 +2,12 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { HomeCard } from '../../components';
-import caimito from '../../public/caimito.png';
-import projectOne from '../../public/frame.png';
-import letchat from '../../public/letchat.png';
-import portfolio from '../../public/portfolio.png';
-import vegan from '../../public/vegan.png';
+import projectsData from '../../data/projects';
 
 import { staggerContainer, textVariant2 } from '../../utils/motion';
 
 export interface IProjects {}
 
-export const exploreprojects = [
-  {
-    id: 'project-1',
-    imgUrl: projectOne,
-    title: 'Project Metarvese',
-  },
-  {
-    id: 'project-2',
-    imgUrl: vegan,
-    title: 'La Vegan Loca',
-  },
-  {
-    id: 'project-3',
-    imgUrl: letchat,
-    title: 'LetChat',
-  },
-  {
-    id: 'project-4',
-    imgUrl: caimito,
-    title: 'Caimito',
-  },
-  {
-    id: 'project-5',
-    imgUrl: portfolio,
-    title: 'Old Portfolio',
-  },
-];
 const Projects: React.FC<IProjects> = () => {
   const [active, setActive] = useState('project-2');
   return (
@@ -59,8 +28,8 @@ const Projects: React.FC<IProjects> = () => {
         className={`innerWidth mx-auto flex flex-col`}
       >
         <div className="gradient-04 -z-10" />
-        <div className="flex lg:flex-row flex-col">
-          {exploreprojects.map((project, index) => (
+        <div className="mt-[50px] grid grid-cols-1 md:grid-cols-2 lg:flex">
+          {projectsData.map((project, index) => (
             <HomeCard
               key={project.id}
               id={project.id}

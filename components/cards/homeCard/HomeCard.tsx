@@ -44,11 +44,11 @@ const HomeCard: React.FC<IHomeCard> = ({
       />
 
       {active !== id ? (
-        <h3 className="font-semibold p-2 sm:text-[26px] text-[18px] absolute z-0 lg:bottom-20 lg:rotate-[-90deg] lg:origin-[0,0] cursor-pointer">
+        <h3 className="font-semibold p-2 sm:text-[32px] text-[26px] bg-base-100 border-primary border-2 absolute z-0 lg:border-none lg:bg-transparent lg:bottom-20 lg:rotate-[-90deg] lg:origin-[0,0] cursor-pointer">
           {title}
         </h3>
       ) : (
-        <div className="absolute bottom-0 p-8 flexCenter w-full flex-col bg-base-100 rounded-b-[24px] cursor-pointer">
+        <div className="absolute bottom-0 p-8 flexCenter w-full flex-col bg-base-100 rounded-b-[24px] cursor-pointer z-10">
           <h2 className="mt-[14px] font-semibold sm:text-[22px] text-[18px]">
             {title}
           </h2>

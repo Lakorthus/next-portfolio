@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { CgMenuGridR } from 'react-icons/cg';
 import { AboutFile, AboutSpan } from '../../components';
-import aboutData from '../../utils/about';
+import aboutData from '../../data/about';
 import { commentAbout, explorerAbout, folderAbout } from '../../utils/motion';
 
 const About = () => {
