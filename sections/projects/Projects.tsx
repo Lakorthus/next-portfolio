@@ -27,19 +27,20 @@ const Projects: React.FC<IProjects> = () => {
         viewport={{ once: false, amount: 0.25 }}
         className={`innerWidth mx-auto flex flex-col`}
       >
-        <div className="gradient-04 -z-10" />
-        <div className="mt-[50px] grid grid-cols-1 md:grid-cols-2 lg:flex">
-          {projectsData.map((project, index) => (
-            <HomeCard
-              key={project.id}
-              id={project.id}
-              imgUrl={project.imgUrl}
-              title={project.title}
-              index={index}
-              active={active}
-              handleClick={setActive}
-            />
-          ))}
+        <div className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-12">
+          <div className="gradient-04 -z-10" />
+          {projectsData &&
+            projectsData.map((project, index) => (
+              <HomeCard
+                key={project.id}
+                id={project.id}
+                imgUrl={project.imgUrl}
+                title={project.title}
+                index={index}
+                active={active}
+                handleClick={setActive}
+              />
+            ))}
         </div>
       </motion.div>
     </section>

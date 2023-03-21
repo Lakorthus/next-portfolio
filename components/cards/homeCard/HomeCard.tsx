@@ -35,21 +35,20 @@ const HomeCard: React.FC<IHomeCard> = ({
       <Image
         src={imgUrl}
         alt="image-project"
-        className={`absolute mb-[8rem] w-full object-contain rounded-[24px] cursor-pointer ${
+        className={`absolute mb-[8rem] w-full h-full object-contain rounded-[24px] cursor-pointer ${
           active === id ? 'glass' : ''
         }`}
         width={500}
         height={500}
         priority
       />
-
       {active !== id ? (
-        <h3 className="font-semibold p-2 sm:text-[32px] text-[26px] bg-base-100 border-primary border-2 absolute z-0 lg:border-none lg:bg-transparent lg:bottom-20 lg:rotate-[-90deg] lg:origin-[0,0] cursor-pointer">
+        <h3 className="absolute font-semibold p-2 sm:text-[26px] text-[18px] z-0 lg:bottom-20 lg:rotate-[-90deg] lg:origin-[0,0]">
           {title}
         </h3>
       ) : (
-        <div className="absolute bottom-0 p-8 flexCenter w-full flex-col bg-base-100 rounded-b-[24px] cursor-pointer z-10">
-          <h2 className="mt-[14px] font-semibold sm:text-[22px] text-[18px]">
+        <div className="absolute bottom-0 p-8 flexCenter w-full flex-col rounded-b-[24px] cursor-pointer z-10">
+          <h2 className="mt-[14px] font-semibold sm:text-[22px] text-[18px] bg-base-100 w-full text-center">
             {title}
           </h2>
           <Link

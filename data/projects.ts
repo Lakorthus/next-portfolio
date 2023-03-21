@@ -30,11 +30,6 @@ const projectsData = [
     imgUrl: portfolio,
     title: 'Old Portfolio',
   },
-  {
-    id: 'project-6',
-    imgUrl: portfolio,
-    title: 'Old Portfolio',
-  },
 ];
 
 export default projectsData;
