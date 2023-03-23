@@ -4,9 +4,9 @@ import Image from 'next/image';
 import infoImage from '../../public/vschair.png';
 
 import { slideIn, staggerContainer, textVariant } from '../../utils/motion';
-export interface Iinfo {}
+export interface IHero {}
 
-const info: React.FC<Iinfo> = () => {
+const Hero: React.FC<IHero> = () => {
   return (
     //yPaddings pl-16 md:pl-32  lg:pl-72
     //
@@ -57,4 +57,4 @@ const info: React.FC<Iinfo> = () => {
   );
 };
 
-export default info;
+export default Hero;
