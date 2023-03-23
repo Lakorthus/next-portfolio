@@ -1,14 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Poppins:wght@400;600;800&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer components {
-  /* test */
-  .btn-primary {
-    @apply border-0 p-2 px-6 rounded-md;
-  }
   /* components */
   .sidebar {
     @apply absolute inset-0 z-40;
@@ -76,8 +72,11 @@
 
 * {
   padding: 0;
-  font-family: 'Noto Serif Lao', serif;
+  font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
+}
+.krona-one {
+  font-family: 'Krona One', sans-serif;
 }
 .hero-gradient {
   background: linear-gradient(
