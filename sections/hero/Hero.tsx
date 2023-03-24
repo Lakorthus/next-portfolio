@@ -16,20 +16,23 @@ const Hero: React.FC<IHero> = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
-        className={`h-screen grid grid-cols-1 grid-rows-1 align-middle bg-secondary md:grid-cols-2 overflow-hidden`}
+        className={`h-screen grid grid-cols-1 grid-rows-1 align-middle bg-neutral sm:grid-cols-2 overflow-hidden`}
       >
-        <div className="relative innerWidth mx-auto flex flex-col md:pt-32 z-20">
+        <motion.div
+          variants={slideIn('left', 'tween', 0.2, 1)}
+          className="relative innerWidth mx-auto flex flex-col sm:pt-24 sm:z-30 bg-secondary"
+        >
           <motion.div
             variants={textVariant(1.1)}
-            className="flex flex-col justify-left items-left paddings"
+            className="flex flex-col justify-left items-left paddings mt-6 sm:mt-0 text-info"
           >
-            <h2 className="krona-one text-2xl font-bold text-info md:text-7xl">
-              Julio
+            <h2 className="krona-one text-2xl font-bold sm:text-3xl md:text-6xl leading-none drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+              JULIO
             </h2>
-            <h1 className="krona-one text-4xl font-bold text-info md:text-8xl md:-mt-1">
-              Velezmoro
+            <h1 className="krona-one text-3xl font-semibold sm:mt-1 sm:text-5xl md:text-7xl  drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+              VELEZMORO
             </h1>
-            <p className="krona-one text-xl font-bold text-info md:text-3xl">
+            <p className="krona-one text-xl mt-3 font-bold sm:text-2xl md:text-3xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
               Full Stack Developer
             </p>
           </motion.div>
@@ -37,21 +40,21 @@ const Hero: React.FC<IHero> = () => {
             variants={textVariant(1.2)}
             className="flex justify-left items-center paddings"
           ></motion.div>
-        </div>
+        </motion.div>
 
         <motion.div
           variants={slideIn('right', 'tween', 0.2, 1)}
-          className={`relative z-10 h-[50vh] w-full bg-accent md:h-screen md:overflow-hidden`}
+          className={`relative z-20 h-[50vh] w-full bg-accent sm:h-screen sm:overflow-hidden`}
         >
           <Image
             src={infoImage}
             alt="Julio Velezmoro holding a giant chair"
-            className="absolute h-[65vh] w-auto bottom-16 left-0 md:z-10 md:-left-4 md:-bottom-12 md:h-screen md:w-[40vw]"
+            className="absolute h-[65vh] w-auto bottom-16 left-0 sm:z-10 sm:-left-4 sm:-bottom-12 sm:h-screen sm:w-[40vw]"
             priority
           />
           <div className="absolute bottom-0 left-0 w-screen h-[15vh] bg-neutral" />
         </motion.div>
-        <div className="absolute bottom-0 left-0 w-screen h-[15vh] bg-neutral "></div>
+        <div className="absolute bottom-0 left-0 w-[50vw] h-[15vh] bg-neutral z-30"></div>
       </motion.div>
     </section>
   );

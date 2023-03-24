@@ -1,5 +1,5 @@
 import { Suspense } from 'react';
-import { Hero } from '../../sections';
+import { Hero } from '../sections';
 
 function Loading() {
   return <h2>🌀 Loading...</h2>;
