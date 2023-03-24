@@ -1,6 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { HeroList } from '../../components';
 import infoImage from '../../public/vschair.png';
 
 import { slideIn, staggerContainer, textVariant } from '../../utils/motion';
@@ -12,7 +13,7 @@ const Hero: React.FC<IHero> = () => {
     //
     <section id="info">
       <motion.div
-        variants={staggerContainer(0.1, 0.1)}
+        variants={staggerContainer(0.05, 0.05)}
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
@@ -24,22 +25,24 @@ const Hero: React.FC<IHero> = () => {
         >
           <motion.div
             variants={textVariant(1.1)}
-            className="flex flex-col justify-left items-left paddings mt-6 sm:mt-0 text-info"
+            className="flex flex-col justify-left items-left paddings mt-6 sm:mt-0 text-neutral"
           >
-            <h2 className="krona-one text-2xl font-bold sm:text-3xl md:text-6xl leading-none drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+            <h2 className="krona-one text-2xl font-bold sm:text-3xl md:text-6xl leading-none drop-shadow-[2px_1.2px_1.2px_rgba(255,245,217)]">
               JULIO
             </h2>
-            <h1 className="krona-one text-3xl font-semibold sm:mt-1 sm:text-5xl md:text-7xl  drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+            <h1 className="krona-one text-3xl font-semibold sm:mt-1 sm:text-5xl md:text-7xl  drop-shadow-[4px_1.2px_1.2px_rgba(255,245,217)]">
               VELEZMORO
             </h1>
-            <p className="krona-one text-xl mt-3 font-bold sm:text-2xl md:text-3xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+            <p className="krona-one text-xl mt-3 font-bold sm:text-2xl md:text-3xl drop-shadow-[2px_1.2px_1.2px_rgba(255,245,217)]">
               Full Stack Developer
             </p>
           </motion.div>
           <motion.div
             variants={textVariant(1.2)}
             className="flex justify-left items-center paddings"
-          ></motion.div>
+          >
+            <HeroList />
+          </motion.div>
         </motion.div>
 
         <motion.div

@@ -38,6 +38,9 @@ module.exports = {
       spacing: {
         128: '32rem',
       },
+      animation: {
+        'spin-slow': 'spin 3s linear infinite',
+      },
     },
   },
   plugins: [require('daisyui')],

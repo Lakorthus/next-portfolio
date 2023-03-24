@@ -24,24 +24,25 @@ const NavButton: React.FC<INavButton> = ({
       variants={navButtonVariants}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
-      className={`menuItem menuMenuItem`}
+      className={`hidden sm:block mb-4  hover:bg-primary hover:bg-opacity-30 rounded-full p-4`}
     >
       <Link
-        className="w-full flex items-center justify-start"
+        className={`w-full h-auto flex flex-col items-center justify-start text-neutral ani hover:animate-spin-slow`}
         href={path}
         {...(download ? { locale: false } : {})}
         {...(target ? { target: '_blank', rel: 'noreferrer' } : {})}
       >
-        <div
-          className={`menuIcon glass flex items-center justify-center border-2 border-solid`}
+        <span
+          className={`text-xl lg:text-3xl drop-shadow-[2px_1.2px_1.2px_rgba(255,245,217)]`}
         >
           {faIcon}
-        </div>
-        <div
-          className={`placeHolder glass w-[8rem] flex items-center justify-center border-2 border-solid`}
+        </span>
+
+        <h2
+          className={`flex-1 drop-shadow-[2px_1.2px_1.2px_rgba(255,245,217)]`}
         >
-          <h2>{placeholder}</h2>
-        </div>
+          {placeholder}
+        </h2>
       </Link>
     </motion.div>
   );

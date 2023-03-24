@@ -4,33 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  /* components */
-  .sidebar {
-    @apply absolute inset-0 z-40;
-  }
-  .menuToggle {
-    @apply border-none cursor-pointer absolute top-4 left-4 w-[50px] h-[50px] rounded-full bg-transparent flex justify-center items-center z-40;
-  }
-  .menu {
-    @apply absolute top-20 left-0 p-6 gap-y-2 z-40;
-  }
-  .menuItem {
-    @apply list-none flex flex-row items-center cursor-pointer;
-  }
-  .menuMenuItem {
-    @apply m-0 p-2;
-  }
-  .menuIcon {
-    @apply w-10 h-10 rounded-full flex items-center mr-5;
-  }
-  /* sections */
-}
-
 @layer utilities {
-  .placeHolder {
-    @apply rounded-md h-5 flex-1 mr-2 py-4;
-  }
   .innerWidth {
     @apply xl:max-w-[1280px] w-full;
   }
