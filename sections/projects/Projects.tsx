@@ -1,9 +1,10 @@
 'use client';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { useState } from 'react';
 import { HomeCard } from '../../components';
 import projectsData from '../../data/projects';
-
+import map from '../../public/map.png';
 import { staggerContainer, textVariant2 } from '../../utils/motion';
 
 export interface IProjects {}
@@ -11,14 +12,14 @@ export interface IProjects {}
 const Projects: React.FC<IProjects> = () => {
   const [active, setActive] = useState('project-2');
   return (
-    <section className={`flexCenter flex-col paddings relative`} id="projects">
+    <section id="projects" className={`flexCenter flex-col paddings relative`}>
       <motion.h2
         variants={textVariant2}
         initial="hidden"
         whileInView="show"
-        className={`my-4 font-bold md:text-[40px] text-[34px] md:my-8 tracking-[15px]`}
+        className={`krona-one my-4 font-bold text-xl sm:text-3xl  sm:my-8`}
       >
-        Projects
+        Some Projects
       </motion.h2>
       <motion.div
         variants={staggerContainer(0.1, 0.1)}
@@ -27,7 +28,13 @@ const Projects: React.FC<IProjects> = () => {
         viewport={{ once: false, amount: 0.25 }}
         className={`innerWidth mx-auto flex flex-col`}
       >
-        <div className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-12">
+        <div className="relative flex flex-col md:flex-row  gap-12 z-30">
+          <Image
+            src={map}
+            alt="contact map"
+            className="w-full h-auto object-cover absolute"
+            priority
+          />
           <div className="gradient-04 -z-10" />
           {projectsData &&
             projectsData.map((project, index) => (

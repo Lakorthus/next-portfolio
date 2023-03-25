@@ -41,6 +41,9 @@ module.exports = {
       animation: {
         'spin-slow': 'spin 3s linear infinite',
       },
+      rotate: {
+        30: '30deg',
+      },
     },
   },
   plugins: [require('daisyui')],

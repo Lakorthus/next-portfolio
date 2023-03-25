@@ -117,9 +117,6 @@
 }
 .monitorText {
   font-family: 'VT323', monospace;
-  font-size: 40px;
-  position: relative;
-  display: inline-block;
   animation: move 15s infinite linear;
 }
 
@@ -129,5 +126,40 @@
   }
   100% {
     left: -100%;
+  }
+}
+
+/* About */
+.bubble {
+  animation: rise 10s infinite ease-in;
+}
+
+.bubble-1 {
+  animation-duration: 12s;
+  animation-delay: 5s;
+}
+.bubble-2 {
+  animation-duration: 7s;
+  animation-delay: 10s;
+}
+.bubble-3 {
+  animation-duration: 15s;
+  animation-delay: 5s;
+}
+.bubble-4 {
+  animation-duration: 7s;
+  animation-delay: 5s;
+}
+@keyframes rise {
+  0% {
+    bottom: -100px;
+    transform: translateX(0);
+  }
+  50% {
+    transform: translate(100px);
+  }
+  100% {
+    bottom: 1080px;
+    transform: translateX(-200px);
   }
 }
