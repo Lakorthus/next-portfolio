@@ -1,35 +1,54 @@
 'use client';
 
-import { motion, useCycle } from 'framer-motion';
-import { useEffect, useState } from 'react';
-import { sidebarVariant } from '../../../utils/motion';
-import MenuToggle from '../../buttons/menuToggle/MenuToggle';
-import Navigation from '../navigationList/Navigation';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useSelectedLayoutSegment } from 'next/navigation';
+import avatar from '../../../public/navbar.png';
 
 export interface IHeader extends React.ComponentPropsWithoutRef<'header'> {}
 
 const Header: React.FC<IHeader> = ({ ...headerProps }) => {
-  const [isOpen, toggleOpen] = useCycle(false, true);
-
-  //loader
-  const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
-  }, []);
-
+  const activeSegment = useSelectedLayoutSegment();
+  const links = [
+    { label: 'Home', path: '/', targetSegment: null },
+    { label: 'About', path: '/about', targetSegment: 'about' },
+    { label: 'Projects', path: '/portfolio', targetSegment: 'portfolio' },
+    { label: 'Contact', path: '/contact', targetSegment: 'contact' },
+  ];
   return (
-    <header {...headerProps}>
-      <motion.nav
-        initial={isLoading ? false : true}
-        animate={isOpen || isLoading ? 'open' : 'closed'}
-      >
-        <motion.div className={`sidebarBg `} variants={sidebarVariant} />
+    <header
+      {...headerProps}
+      className={`navbar h-[3rem] justify-between xPaddings bg-tranparent w-full fixed top-0 left-0 right-0 z-50 gap-2 md:top-4`}
+    >
+      <div className="hidden sm:flex animate-pulse">
+        <Image
+          className="h-18 w-auto"
+          src={avatar}
+          alt="Avatar of Julio Velezmoro"
+          priority
+        />
+      </div>
 
-        <MenuToggle toggle={() => toggleOpen()} />
-        <Navigation className={`${isOpen ? `` : `hidden`}`} />
-      </motion.nav>
+      <div
+        className={`krona-one flex-1 flex justify-end items-center text-info gap-4 sm:gap-8 md:text-xl`}
+      >
+        {links.map((singleRoute, idx) => {
+          return (
+            <Link
+              key={idx}
+              href={singleRoute.path}
+              passHref
+              className={`flex cursor-pointer transition-colors duration-300 font-semibold ${
+                activeSegment === singleRoute.targetSegment
+                  ? `underline underline-offset-4 scale-125`
+                  : ``
+              }`}
+            >
+              {singleRoute.label}
+            </Link>
+          );
+        })}
+      </div>
     </header>
   );
 };

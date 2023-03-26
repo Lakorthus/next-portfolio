@@ -1,5 +1,5 @@
 import { Suspense } from 'react';
-import { About, Contact, Hero, Projects } from '../../sections';
+import { About, Hero, Projects } from '../sections';
 
 function Loading() {
   return <h2>🌀 Loading...</h2>;
@@ -14,10 +14,6 @@ const Home = () => {
           <About />
           <div className="gradient-03 z-0" />
           <Projects />
-        </div>
-        <div className="relative">
-          <Contact />
-          <div className="gradient-04 z-0" />
         </div>
       </div>
     </Suspense>

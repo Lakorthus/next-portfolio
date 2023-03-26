@@ -12,29 +12,26 @@ const AboutList: React.FC<IAboutList> = ({ text, number }) => {
   const [useText] = useTypewriter({
     loop: true,
     words: [text],
-    delaySpeed: 4000,
+    delaySpeed: 20000,
     typeSpeed: 100,
     deleteSpeed: 100,
   });
   return (
-    <div className="relative flexCenter pl-2">
-      <div className={`flexCenter w-24 h-16 rounded-full bg-[#323F5D]`}>
-        <motion.p
-          variants={fadeIn('up', 'tween', 0.2, 1)}
-          className="font-bold text-[20px]"
-        >
-          {number}
-        </motion.p>
-      </div>
-      <div className={`flexCenter w-full h-44 ml-8`}>
-        <motion.p
-          variants={fadeIn('up', 'tween', 0.2, 1)}
-          className="w-full font-normal md:text-[30px] text-[24px] text-[#B0B0B0] leading-[32.4px]"
-        >
-          {useText}
-          <Cursor cursorColor="orange" />
-        </motion.p>
-      </div>
+    <div className="relative h-[11rem] inline-flex items-center pl-2 text-lg text-info sm:text-xl">
+      <motion.p
+        variants={fadeIn('up', 'tween', 0.2, 1)}
+        className="font-bold flexCenter h-14 w-16 rounded-full bg-[#7073b0] "
+      >
+        {number}
+      </motion.p>
+
+      <motion.p
+        variants={fadeIn('up', 'tween', 0.2, 1)}
+        className="w-full font-normal flex items-center ml-8 "
+      >
+        {useText}
+        <Cursor cursorColor="orange" />
+      </motion.p>
     </div>
   );
 };

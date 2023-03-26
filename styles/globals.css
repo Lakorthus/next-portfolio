@@ -1,47 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Poppins:wght@400;600;800&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  /* test */
-  .btn-primary {
-    @apply border-0 p-2 px-6 rounded-md;
-  }
-  /* components */
-  .sidebar {
-    @apply absolute inset-0 z-40;
-  }
-  .menuToggle {
-    @apply border-none cursor-pointer absolute top-4 left-4 w-[50px] h-[50px] rounded-full bg-transparent flex justify-center items-center z-40;
-  }
-  .menu {
-    @apply absolute top-20 left-0 p-6 gap-y-2 z-40;
-  }
-  .menuItem {
-    @apply list-none flex flex-row items-center cursor-pointer;
-  }
-  .menuMenuItem {
-    @apply m-0 p-2;
-  }
-  .menuIcon {
-    @apply w-10 h-10 rounded-full flex items-center mr-5;
-  }
-  /* sections */
-  /* hero  */
-  .heroHeading {
-    @apply font-bold flex items-center lg:text-[144px] md:text-[100px] sm:text-[60px] text-[44px] lg:leading-[158.4px] md:leading-[114.4px] sm:leading-[74.4px] leading-[64.4px] uppercase;
-  }
-  .heroOText {
-    @apply md:w-[212px] sm:w-[80px] w-[60px] md:h-[108px] sm:h-[48px] h-[38px] md:border-[18px] border-[9px] rounded-full sm:mx-2 mx-[6px];
-  }
-}
-
 @layer utilities {
-  .placeHolder {
-    @apply rounded-md h-5 flex-1 mr-2 py-4;
-  }
   .innerWidth {
     @apply xl:max-w-[1280px] w-full;
   }
@@ -76,8 +39,11 @@
 
 * {
   padding: 0;
-  font-family: 'Noto Serif Lao', serif;
+  font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
+}
+.krona-one {
+  font-family: 'Krona One', sans-serif;
 }
 .hero-gradient {
   background: linear-gradient(
@@ -151,9 +117,6 @@
 }
 .monitorText {
   font-family: 'VT323', monospace;
-  font-size: 40px;
-  position: relative;
-  display: inline-block;
   animation: move 15s infinite linear;
 }
 
@@ -163,5 +126,40 @@
   }
   100% {
     left: -100%;
+  }
+}
+
+/* About */
+.bubble {
+  animation: rise 10s infinite ease-in;
+}
+
+.bubble-1 {
+  animation-duration: 12s;
+  animation-delay: 5s;
+}
+.bubble-2 {
+  animation-duration: 7s;
+  animation-delay: 10s;
+}
+.bubble-3 {
+  animation-duration: 15s;
+  animation-delay: 5s;
+}
+.bubble-4 {
+  animation-duration: 7s;
+  animation-delay: 5s;
+}
+@keyframes rise {
+  0% {
+    bottom: -100px;
+    transform: translateX(0);
+  }
+  50% {
+    transform: translate(100px);
+  }
+  100% {
+    bottom: 1080px;
+    transform: translateX(-200px);
   }
 }

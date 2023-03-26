@@ -1,4 +1,4 @@
-import { Header } from '../../index';
+import { Header } from '../../../components';
 
 export interface IPrimaryLayout extends React.ComponentPropsWithoutRef<'div'> {
   children: React.ReactNode;
@@ -14,7 +14,6 @@ const PrimaryLayout: React.FC<IPrimaryLayout> = ({
     <>
       <div {...divProps} className={`overflow-hidden ${className}`}>
         <Header />
-
         {children}
       </div>
     </>

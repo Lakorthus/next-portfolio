@@ -8,7 +8,21 @@ module.exports = {
     './stories/**/*.{ts,tsx}',
   ],
   daisyui: {
-    themes: ['synthwave'],
+    themes: [
+      {
+        mytheme: {
+          primary: '#fde192',
+          secondary: '#fda292',
+          accent: '#d35d47',
+          neutral: '#191D24',
+          'base-100': '#0c1061',
+          info: '#fff5d9',
+          success: '#349a57',
+          warning: '#FBBD23',
+          error: '#F87272',
+        },
+      },
+    ],
   },
   theme: {
     // Ensure these match with .storybook/preview.js
@@ -21,29 +35,14 @@ module.exports = {
     },
 
     extend: {
-      colors: {
-        // Ligth theme
-        light: {
-          primary: '#a4dad2',
-          secondary: '#152C36',
-          tertiary: '#FBBF24',
-          hot: '#37392e',
-          light: '#EAEEF3',
-          pink: '#F637EC',
-          blue: '#3330E4',
-          yellow: '#FAEA48',
-        },
-
-        dark: {
-          primary: '#37392e',
-          secondary: '#EAEEF3',
-          tertiary: '#FBBF24',
-          hot: '#f6d809',
-          dark: '#37392e',
-        },
-      },
       spacing: {
         128: '32rem',
+      },
+      animation: {
+        'spin-slow': 'spin 3s linear infinite',
+      },
+      rotate: {
+        30: '30deg',
       },
     },
   },
