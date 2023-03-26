@@ -17,7 +17,7 @@ const Projects: React.FC<IProjects> = () => {
         variants={textVariant2}
         initial="hidden"
         whileInView="show"
-        className={`krona-one my-4 font-bold text-xl sm:text-3xl  sm:my-8`}
+        className={`krona-one my-4 font-bold text-xl sm:text-3xl sm:my-8`}
       >
         Some Projects
       </motion.h2>
@@ -32,7 +32,7 @@ const Projects: React.FC<IProjects> = () => {
           <Image
             src={map}
             alt="contact map"
-            className="w-full h-auto object-cover absolute"
+            className="w-full h-auto object-cover absolute -z-10"
             priority
           />
           <div className="gradient-04 -z-10" />
