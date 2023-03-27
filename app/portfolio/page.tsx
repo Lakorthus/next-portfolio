@@ -1,5 +1,6 @@
 import { Suspense } from 'react';
 import { TabProjects } from '../../components';
+import projectsData from '../../data/projects';
 
 function Loading() {
   return <h2>🌀 Loading...</h2>;
@@ -19,7 +20,7 @@ const Portfolio = () => {
             🚧 Under construction 🚧
           </span>
         </p>
-        <TabProjects />
+        <TabProjects liveProjects={projectsData} />
       </section>
     </Suspense>
   );

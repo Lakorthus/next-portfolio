@@ -13,10 +13,12 @@ const aboutData = [
   {
     title: 'Next',
     listItems: [
-      'reusable components.md',
+      'reusable Comp.md',
       'routing.md',
       'fetching api.md',
       'SSR.md',
+      'SSG.md',
+      'SEO.md',
     ],
     blue: true,
   },
@@ -43,11 +45,11 @@ const aboutData = [
   {
     title: 'Free Time',
     listItems: [
-      'read science fiction.md',
-      'play video games.md',
+      'read.md',
+      'video games.md',
       'out w friends.md',
-      'learn new things.md',
-      'gym and fit.md',
+      'learn things.md',
+      'gym & fit.md',
     ],
   },
 ];

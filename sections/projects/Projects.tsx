@@ -37,13 +37,13 @@ const Projects: React.FC<IProjects> = () => {
           />
           <div className="gradient-04 -z-10" />
           {projectsData &&
-            projectsData.map((project, index) => (
+            projectsData.map((project, idx) => (
               <HomeCard
-                key={project.id}
-                id={project.id}
+                key={idx}
+                id={idx.toString()}
                 imgUrl={project.imgUrl}
                 title={project.title}
-                index={index}
+                index={idx}
                 active={active}
                 handleClick={setActive}
               />

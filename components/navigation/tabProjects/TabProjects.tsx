@@ -1,11 +1,12 @@
 'use client';
 import { useState } from 'react';
-import Pokemon from '../../../projects/pokemon/Pokemon';
-import Weather from '../../../projects/weather/Weather';
+import ProjectCard, { IProjectCard } from '../../cards/projectCard/ProjectCard';
 
-export interface ITabProjects {}
+export interface ITabProjects {
+  liveProjects: IProjectCard[];
+}
 
-const TabProjects: React.FC<ITabProjects> = () => {
+const TabProjects: React.FC<ITabProjects> = ({ liveProjects }) => {
   const [openTab, setOpenTab] = useState(1);
 
   return (
@@ -70,20 +71,25 @@ const TabProjects: React.FC<ITabProjects> = () => {
           `}
           id="link1"
         >
-          <Pokemon />
-          <Weather />
-          <Pokemon />
+          {liveProjects &&
+            liveProjects.map((project, idx) => (
+              <ProjectCard
+                key={idx}
+                title={project.title}
+                text={project.text}
+                span={project.span}
+                live={project.live}
+                gitHub={project.gitHub}
+                imgUrl={project.imgUrl}
+              />
+            ))}
         </div>
         <div
           className={`max-w-[1440px] grid grid-cols-1
             ${openTab === 2 ? 'block' : 'hidden'}
           `}
           id="link2"
-        >
-          <Pokemon />
-          <Pokemon />
-          <Pokemon />
-        </div>
+        ></div>
       </div>
     </div>
   );
