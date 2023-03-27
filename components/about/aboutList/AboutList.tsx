@@ -27,7 +27,7 @@ const AboutList: React.FC<IAboutList> = ({ text, number }) => {
 
       <motion.p
         variants={fadeIn('up', 'tween', 0.2, 1)}
-        className="w-full font-normal flex items-center ml-8 "
+        className="w-full font-normal flex items-center ml-8"
       >
         {useText}
         <Cursor cursorColor="orange" />

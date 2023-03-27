@@ -31,7 +31,7 @@ const AboutSpan: React.FC<IAboutSpan> = ({ start, end }) => {
           if (number === 27 || number === 33) {
             return (
               <div key={index} className={`flexCenter gap-1`}>
-                <span className="opacity-80">{number}</span>
+                <span className="opacity-40 text-info">{number}</span>
                 <div className="opacity-90 w-2 h-2 rounded-full bg-red-600" />
               </div>
             );
@@ -39,17 +39,17 @@ const AboutSpan: React.FC<IAboutSpan> = ({ start, end }) => {
             return (
               <span
                 key={index}
-                className={
+                className={`text-info ${
                   number <= 16
                     ? 'opacity-60'
                     : number > 16 && number <= 20
-                    ? 'opacity-70'
+                    ? 'opacity-50'
                     : number > 27 && number <= 31
-                    ? 'opacity-70'
+                    ? 'opacity-40'
                     : number > 31 && number <= 34
-                    ? 'opacity-60'
-                    : ''
-                }
+                    ? 'opacity-40'
+                    : 'opacity-60'
+                }`}
               >
                 {number}
               </span>
