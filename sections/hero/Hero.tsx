@@ -113,6 +113,19 @@ const Hero: React.FC<IHero> = () => {
             </p>
           </motion.div>
           <motion.div
+            variants={imageMe('left')}
+            className="absolute w-screen flexCenter z-30 sm:bottom-[50%] "
+          >
+            <Link
+              href={'./contact'}
+              className="hidden krona-one -z-10 sm:flexCenter text-center text-xl font-bold w-[15vh] h-[15vh] rounded-full bg-info tracking-[0.5rem] text-accent -rotate-30"
+            >
+              HIRE
+              <br />
+              ME
+            </Link>
+          </motion.div>
+          <motion.div
             variants={textVariant(1.2)}
             className="flex justify-left items-center paddings"
           >
@@ -141,22 +154,10 @@ const Hero: React.FC<IHero> = () => {
             </div>
           </div>
         </motion.div>
-        <motion.div
-          variants={imageMe('left')}
-          className="absolute w-screen flexCenter z-30 sm:bottom-[38%] "
-        >
-          <Link
-            href={'./contact'}
-            className="hidden krona-one sm:flexCenter text-center text-xl font-bold w-[15vh] h-[15vh] rounded-full bg-info tracking-[0.5rem] text-accent -rotate-30"
-          >
-            HIRE
-            <br />
-            ME
-          </Link>
-        </motion.div>
+
         <motion.div
           variants={slideIn('left', 'tween', 0.2, 1)}
-          className="absolute bottom-0 left-0 w-screen h-[15vh] bg-neutral z-30 col-auto xPaddings grid sm:w-[50vw]"
+          className="absolute bottom-0 left-0 w-screen h-[15vh] bg-neutral z-30 col-auto p-4 grid sm:w-[50vw]"
         >
           <div>
             {icons.map((icon, idx) => (

@@ -20,7 +20,10 @@ const About = () => {
   };
 
   return (
-    <div className={`h-screen flexCenter yPaddings xPaddings`}>
+    <section className={`h-screen flexCenter flex-col paddings`}>
+      <h2 className="krona-one mb-4 text-4xl tracking-tight font-extrabold text-center">
+        Contact Me
+      </h2>
       <div className="gradient-02 z-0" />
       <div className="bg-[#121216] w-full h-[80%] flex justify-start relative overflow-hidden">
         <div className="flex justify-start w-full relative">
@@ -32,7 +35,7 @@ const About = () => {
                 animate="visible"
                 variants={explorerAbout}
               >
-                <div className="bg-[#121216] border-8 border-[#121216] h-full p-4">
+                <div className="bg-[#121216] border-8 border-[#121216] h-full p-4 text-info">
                   <h3 className="font-bold ml-3.5 mb-2.5 lg:text-2xl text-xl">
                     Explorer
                   </h3>
@@ -100,13 +103,13 @@ const About = () => {
         </div>
 
         <div
-          className={` text-3xl cursor-pointer flex opacity-100 z-30`}
+          className={` text-3xl cursor-pointer flex opacity-100 z-30 text-info`}
           onClick={() => setShowMenu(!showMenu)}
         >
           {showMenu ? <CgMenuGridR /> : <CgMenuGridR />}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

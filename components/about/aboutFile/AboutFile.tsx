@@ -60,7 +60,7 @@ const AboutFile: React.FC<IAboutFile> = ({
             }}
           />
 
-          <span> {title}</span>
+          <span className="text-info opacity-80"> {title}</span>
         </div>
         {show && (
           <AnimatePresence>
