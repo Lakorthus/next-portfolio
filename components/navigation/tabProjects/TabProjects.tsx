@@ -11,11 +11,19 @@ const TabProjects: React.FC<ITabProjects> = () => {
   return (
     <div>
       <ul className="ml-1 flex list-none flex-wrap gap-4 p-4" role="tablist">
-        <li className="flex flex-1 justify-center items-center text-center">
+        <li
+          className={`
+            flex flex-1 justify-center items-center text-center bg-secondary text-info
+            ${
+              openTab === 1
+                ? 'bg-opacity-100 underline rounded-full'
+                : 'bg-opacity-80'
+            }
+          `}
+        >
           <a
             className={
-              'block rounded px-2 py-3 text-4xl font-bold uppercase leading-normal shadow-lg ' +
-              (openTab === 1 ? 'bg-primary bg-opacity-50' : '')
+              'text-2xl font-semibold uppercase leading-normal shadow-lg'
             }
             onClick={(e) => {
               e.preventDefault();
@@ -26,14 +34,21 @@ const TabProjects: React.FC<ITabProjects> = () => {
             role="tablist"
             aria-label="See tickets in progress"
           >
-            Interactives Cards
+            Live
           </a>
         </li>
-        <li className="flex flex-1 justify-center items-center text-center">
+        <li
+          className={`flex flex-1 justify-center items-center text-center bg-accent text-info
+            ${
+              openTab === 2
+                ? ' bg-opacity-100 underline rounded-full'
+                : 'bg-opacity-80 '
+            }
+          `}
+        >
           <a
             className={
-              'block rounded px-2 py-3 text-4xl font-bold uppercase leading-normal shadow-lg ' +
-              (openTab === 2 ? 'bg-primary bg-opacity-50' : '')
+              'block px-2 py-3 text-2xl font-semibold uppercase leading-normal shadow-lg '
             }
             onClick={(e) => {
               e.preventDefault();
@@ -44,16 +59,15 @@ const TabProjects: React.FC<ITabProjects> = () => {
             role="tablist"
             aria-label="See completed tickets"
           >
-            Live Projects
+            Interactives
           </a>
         </li>
       </ul>
       <div className="relative mb-6 flex flex-col rounded shadow-lg">
         <div
-          className={
-            'max-w-[1440px] grid grid-cols-0 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ' +
-            (openTab === 1 ? 'block' : 'hidden')
-          }
+          className={`max-w-[1440px] grid grid-cols-1 
+            ${openTab === 1 ? 'block' : 'hidden'}
+          `}
           id="link1"
         >
           <Pokemon />
@@ -61,10 +75,9 @@ const TabProjects: React.FC<ITabProjects> = () => {
           <Pokemon />
         </div>
         <div
-          className={
-            'max-w-[1440px] grid grid-cols-0 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ' +
-            (openTab === 2 ? 'block' : 'hidden')
-          }
+          className={`max-w-[1440px] grid grid-cols-1
+            ${openTab === 2 ? 'block' : 'hidden'}
+          `}
           id="link2"
         >
           <Pokemon />
