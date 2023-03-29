@@ -37,17 +37,19 @@ const Projects: React.FC<IProjects> = () => {
           />
           <div className="gradient-04 -z-10" />
           {projectsData &&
-            projectsData.map((project, idx) => (
-              <HomeCard
-                key={idx}
-                id={idx.toString()}
-                imgUrl={project.imgUrl}
-                title={project.title}
-                index={idx}
-                active={active}
-                handleClick={setActive}
-              />
-            ))}
+            projectsData
+              .slice(0, 5)
+              .map((project, idx) => (
+                <HomeCard
+                  key={idx}
+                  id={idx.toString()}
+                  imgUrl={project.imgUrl}
+                  title={project.title}
+                  index={idx}
+                  active={active}
+                  handleClick={setActive}
+                />
+              ))}
         </div>
       </motion.div>
     </section>
