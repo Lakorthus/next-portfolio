@@ -22,7 +22,7 @@ const About = () => {
   return (
     <section className={`h-screen flexCenter flex-col paddings`}>
       <h2 className="krona-one mb-4 text-4xl tracking-tight font-extrabold text-center">
-        Contact Me
+        About me
       </h2>
       <div className="gradient-02 z-0" />
       <div className="bg-[#121216] w-full h-[80%] flex justify-start relative overflow-hidden">
@@ -80,21 +80,30 @@ const About = () => {
             </div>
             <div className={`flex items-center justify-start h-full ml-2`}>
               <AboutSpan start={14} end={50} />
-              <div className={`flex flex-col text-gray-500 text-lg ml-6`}>
+              <div
+                className={`flex flex-col text-gray-500 text-lg ml-6 max-w-lg`}
+              >
                 <span className={`-ml-3.5`}> / ** </span>
                 <h2 className={`font-bold`}>
                   <span>*</span>About me
                 </h2>
                 <p>
-                  <span>*</span> Creative and self-starting Front-End Developer
+                  <span>*</span> Creative and self-starting Full Stack Developer
                   <br />
-                  <span>*</span> with 2 years experience and maintaining
                   <br />
-                  <span>*</span> responsive websites.
+                  <span>*</span> At the tender age of 26, I made the bold
+                  decision to
                   <br />
-                  <span>*</span> Proficient in HTML, CSS, JavaScript
+                  <span>*</span> up sticks, sell everything I owned, and
+                  purchase a
                   <br />
-                  <span>*</span> and React plus modern libraries and frameworks.
+                  <span>*</span> one-way ticket to the United Kingdom.
+                  <br />
+                  <br />
+                  <span>*</span> Family means the world to me, and I bring that
+                  same
+                  <br />
+                  <span>*</span> level of dedication and commitment to my work.
                 </p>
                 <span className={`-ml-3.5`}>* /</span>
               </div>

@@ -89,7 +89,20 @@ const TabProjects: React.FC<ITabProjects> = ({ liveProjects }) => {
             ${openTab === 2 ? 'block' : 'hidden'}
           `}
           id="link2"
-        ></div>
+        >
+          <div className="flex flex-col items-center justify-center">
+            <h1 className="text-4xl font-bold text-center text-info">
+              Coming Soon
+              <br />
+              <span className="underline text-sm mt-4 text-accent">
+                🚧 Under construction 🚧
+              </span>
+            </h1>
+            <p className="text-2xl font-bold text-center text-info">
+              Check back soon for more projects!
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
