@@ -1,4 +1,5 @@
 import { PrimaryLayout } from '../components';
+import AnalyticsInfo from '../context/analytics/AnalyticsInfo';
 import '../styles/globals.css';
 
 function RootLayout({
@@ -12,6 +13,7 @@ function RootLayout({
     <html lang="en">
       <body>
         <PrimaryLayout>{children}</PrimaryLayout>
+        <AnalyticsInfo />
       </body>
     </html>
   );
