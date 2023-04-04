@@ -23,40 +23,39 @@ const Pokemon: React.FC<IPokemon> = () => {
   }, []);
 
   return (
-    <>
+    <div className="flexCenter w-full">
       {pokemon && (
-        <div className="flex w-full justify-around mb-6 p-2">
-          <picture
-            className={`card w-1/3 rounded-full  cursor-pointer border border-gray-400  hover:shadow-md hover:border-opacity-0 transform hover:-translate-y-1 transition-all duration-200o flex items-center justify-center bg-light-primary`}
-          >
+        <div className="flex w-full justify-around mb-6">
+          <picture className={`card rounded-full justify-center glass`}>
             <img
-              className="rounded-full"
+              className="object-contain w-40 h-40"
               src={pokemon.sprites.front_default}
               alt={pokemon.name}
             />
           </picture>
-          <div className="w-1/3 p-2 flex flex-col justify-center">
-            <span className={`font-bold text-lg mb-2 text-dark-hot`}>
+          <div className="w-1/2 p-2 gap-2 flexCenter flex-col">
+            <span className={`krona-one font-bold text-lg mb-2 `}>
               #{pokemon.id.toString().padStart(3, '0')}
             </span>
-            <h3
-              className={`font-light font-mono text-sm transition-all duration-200 text-dark-content-text hover:text-dark-hot`}
-            >
+            <h3 className={`font-light text-sm`}>
               {pokemon.name.toUpperCase()}
             </h3>
-            <small
-              className={`font-light font-mono text-sm transition-all duration-200 text-dark-content-text hover:text-dark-hot`}
-            >
+            <small className={`font-light text-sm`}>
               Type: <span>{pokemon.types[0].type.name}</span>
             </small>
           </div>
         </div>
       )}
 
-      <button className="btn btn-primary" onClick={randomPokemon}>
-        Random Pokemon
-      </button>
-    </>
+      <div className="flexCenter flex-col w-full">
+        <button
+          className="btn btn-primary btn-sm"
+          onClick={() => randomPokemon()}
+        >
+          Random Pokemon
+        </button>
+      </div>
+    </div>
   );
 };
 export default Pokemon;

@@ -1,5 +1,8 @@
 'use client';
 import { useState } from 'react';
+import Pokemon from '../../../projects/pokemon/Pokemon';
+import Three from '../../../projects/three/Three';
+import Weather from '../../../projects/weather/Weather';
 import ProjectCard, { IProjectCard } from '../../cards/projectCard/ProjectCard';
 
 export interface ITabProjects {
@@ -90,18 +93,38 @@ const TabProjects: React.FC<ITabProjects> = ({ liveProjects }) => {
           `}
           id="link2"
         >
-          <div className="flex flex-col items-center justify-center">
-            <h1 className="text-4xl font-bold text-center text-info">
-              Coming Soon
-              <br />
-              <span className="underline text-sm mt-4 text-accent">
-                🚧 Under construction 🚧
-              </span>
-            </h1>
-            <p className="text-2xl font-bold text-center text-info">
-              Check back soon for more projects!
-            </p>
-          </div>
+          <ProjectCard
+            title={'Three.js'}
+            text={
+              'This is a React component that uses the @react-three/fiber and @react-three/drei libraries to create a 3D scene with two canvas elements. Each canvas contains some 3D objects with different shapes and materials, and they can be interacted with using mouse clicks and hovering. The useFrame hook is used to update the objects positions and rotations every frame.'
+            }
+            span={[
+              'React',
+              'Three.js',
+              'React Three Fiber',
+              'React Three Drei',
+            ]}
+          >
+            <Three />
+          </ProjectCard>
+          <ProjectCard
+            title={'Pokemon'}
+            text={
+              'This is a React component that generates a random Pokemon using the PokeAPI and displays its image, name, ID number, and type. It also includes a button to generate a new random Pokemon.'
+            }
+            span={['React', 'TypeScript', 'React Hooks', 'Tailwind CSS']}
+          >
+            <Pokemon />
+          </ProjectCard>
+          <ProjectCard
+            title={'Weather App'}
+            text={
+              'This project is a React-based weather application that uses the OpenWeatherMap API to display the current weather and temperature of a location. Users can search for the weather of any location by entering the location name in the search bar. The UI is designed using Tailwind CSS. Overall, it is a simple and effective application.'
+            }
+            span={['React', 'Tailwind CSS', 'OpenWeatherMap API']}
+          >
+            <Weather />
+          </ProjectCard>
         </div>
       </div>
     </div>
