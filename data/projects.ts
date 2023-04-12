@@ -45,8 +45,8 @@ const projectsData = [
     imgUrl: letchat,
     title: 'LetChat',
     text: 'LetChat is a platform aimed to improve communication between Landlords and Tenants. Built in a Team of 5, we used Next.js, React, FireBase, Sql, TypeScript and TailwindCSS to make this project.',
-    live: 'https://github.com/Lakorthus/bc13_final-project_front-end-git-gud',
-    gitHub: 'https://letchat.co.uk',
+    live: 'https://letchat.co.uk',
+    gitHub: 'https://github.com/Lakorthus/bc13_final-project_front-end-git-gud',
     span: [
       'React',
       'Next.js',
